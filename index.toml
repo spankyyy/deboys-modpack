@@ -3800,7 +3800,7 @@ metafile = true
 
 [[files]]
 file = "mods/create-octo-arms.pw.toml"
-hash = "0f881a6c9ed677d6b85f0ad9124cdd51a0eb647731f4500fe05dfb7f2fdc5135"
+hash = "e8d127fc1b86ab114f8bc52b6696c013f5ba92b3a6118a17c303e76c2b65be55"
 metafile = true
 
 [[files]]
@@ -3840,7 +3840,7 @@ metafile = true
 
 [[files]]
 file = "mods/create-step-up.pw.toml"
-hash = "2c686ec686ecd5e081696e3612bc5d875e38009f55d0363e2f8da8e5260655e6"
+hash = "f97c2ab70e649b5e7b7f493cb11ae3df3b97a98a74ef1766144c2ddd941d5790"
 metafile = true
 
 [[files]]
@@ -4598,7 +4598,7 @@ metafile = true
 
 [[files]]
 file = "mods/thaumaturge.pw.toml"
-hash = "90e2793055c43b4da864a2d46ef2620bc0ed5bdd021eeb22958e3d637b8ed718"
+hash = "f6feca414741675a055e64ed54f3cb1b95bf36570d714da82e25cf5d02326da4"
 metafile = true
 
 [[files]]
