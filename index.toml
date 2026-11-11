@@ -4756,7 +4756,7 @@ metafile = true
 
 [[files]]
 file = "mods/zume.pw.toml"
-hash = "d5a695e6845047b97b37311fc5d5d7cf7b81d4acdcae78e7e95412616c56424c"
+hash = "c387d2dffe9e68bdf54d4950b2356b6d621309bd860e416d3f72a6f645cf475a"
 metafile = true
 
 [[files]]
