@@ -15,3 +15,5 @@ config/ItemLocks/nodes/**
 config/ars_nouveau/search_index/**
 config/watermedia/custom_vlc_path.txt
 config/xaeropatreon.txt
+config/almostunified/debug.json
+**/.gitignore

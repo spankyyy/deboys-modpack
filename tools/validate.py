@@ -2,6 +2,7 @@
 
 import hashlib
 import json
+import subprocess
 import sys
 from pathlib import Path
 
@@ -41,6 +42,16 @@ for entry in index["files"]:
             curseforge = data["update"]["curseforge"]
             assert curseforge["file-id"] > 0 and curseforge["project-id"] > 0
         assert data["download"]["hash"]
+if (root / ".git").exists():
+    result = subprocess.run(
+        ["git", "--no-pager", "check-ignore", "--stdin"],
+        input="\n".join(sorted(seen)) + "\n",
+        text=True,
+        capture_output=True,
+        cwd=root,
+    )
+    assert result.returncode in (0, 1), result.stderr
+    assert not result.stdout.strip(), "Indexed files ignored by Git:\n" + result.stdout
 print(f"Validated {len(seen)} indexed files and pack/index hashes.")
 unresolved = json.loads((root / "UNRESOLVED.json").read_text(encoding="utf-8"))
 if unresolved:

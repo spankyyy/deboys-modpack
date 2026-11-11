@@ -101,6 +101,9 @@ def main():
         shutil.rmtree(config_target / relative, ignore_errors=True)
     for relative in ("watermedia/custom_vlc_path.txt", "xaeropatreon.txt"):
         (config_target / relative).unlink(missing_ok=True)
+    (config_target / "almostunified/debug.json").unlink(missing_ok=True)
+    for path in config_target.rglob(".gitignore"):
+        path.unlink()
     # Voice-chat server settings may contain a password; do not publish them by default.
     for path in config_target.rglob("voicechat-server.properties"):
         path.unlink()
