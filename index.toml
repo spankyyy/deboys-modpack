@@ -4715,6 +4715,11 @@ hash = "c387d2dffe9e68bdf54d4950b2356b6d621309bd860e416d3f72a6f645cf475a"
 metafile = true
 
 [[files]]
+file = "options.txt"
+hash = "77b007ccd937355b384ebade0102175504c1a4a7d7a063a934db1219ed8bac0c"
+preserve = true
+
+[[files]]
 file = "resourcepacks/Comforts Modernized - V1.1.zip.pw.toml"
 hash = "be9d93652486d680e75bebcd3db53309589c4a97c133275e4551a9063cbd885b"
 metafile = true

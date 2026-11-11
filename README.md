@@ -2,7 +2,7 @@
 
 Minecraft **1.21.1**, NeoForge **21.1.265**, Java **21**.
 
-This directory is the repository root: publish **only its contents**, not the surrounding Minecraft instance. Worlds, player identities, servers.dat, logs, caches, options.txt and disabled mods are deliberately excluded. Active resource-pack ZIPs are represented by download manifests. Existing enabled resource-pack selections and key bindings are not distributed. The initial conversion preserved the original instance. Tetra and its unused dependency mutil were subsequently removed from active mods; their JARs are backed up in the parent instance's `removed-mods/tetra/` folder, outside this repository. Back up existing worlds before loading them without Tetra: its items and blocks may be lost.
+This directory is the repository root: publish **only its contents**, not the surrounding Minecraft instance. Worlds, player identities, servers.dat, logs, caches and disabled mods are deliberately excluded. Active resource-pack ZIPs are represented by download manifests. `options.txt` supplies initial settings, key bindings and resource-pack selections only when the client has no existing file. Its index entry uses `preserve = true`, so existing player settings are retained, including on later updates. Keep that flag when editing the index or refreshing the pack. The initial conversion preserved the original instance. Tetra and its unused dependency mutil were subsequently removed from active mods; their JARs are backed up in the parent instance's `removed-mods/tetra/` folder, outside this repository. Back up existing worlds before loading them without Tetra: its items and blocks may be lost.
 
 ## Bundled custom mods and publication review
 
