@@ -9,3 +9,9 @@ UNRESOLVED.json
 .packwizignore
 packwiz.exe
 packwiz-installer-bootstrap.jar
+
+# Local player state, generated search caches, and machine-specific markers.
+config/ItemLocks/nodes/**
+config/ars_nouveau/search_index/**
+config/watermedia/custom_vlc_path.txt
+config/xaeropatreon.txt

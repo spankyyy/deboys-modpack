@@ -97,6 +97,10 @@ def main():
         config_target,
         ignore=shutil.ignore_patterns("*.log", "*.bak", "*.old"),
     )
+    for relative in ("ItemLocks/nodes", "ars_nouveau/search_index"):
+        shutil.rmtree(config_target / relative, ignore_errors=True)
+    for relative in ("watermedia/custom_vlc_path.txt", "xaeropatreon.txt"):
+        (config_target / relative).unlink(missing_ok=True)
     # Voice-chat server settings may contain a password; do not publish them by default.
     for path in config_target.rglob("voicechat-server.properties"):
         path.unlink()

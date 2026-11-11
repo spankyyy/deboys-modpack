@@ -9,22 +9,6 @@ file = "config/DistantHorizons.toml"
 hash = "08a2238d3b1a591b9f0477b5894ea689cd707401748b46058d1ef665e84e421b"
 
 [[files]]
-file = "config/ItemLocks/nodes/MP/deboys_spankableinc_org.ilcks"
-hash = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-
-[[files]]
-file = "config/ItemLocks/nodes/MP/localhost.ilcks"
-hash = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-
-[[files]]
-file = "config/ItemLocks/nodes/SP/New World.ilcks"
-hash = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-
-[[files]]
-file = "config/ItemLocks/nodes/SP/sea level test.ilcks"
-hash = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-
-[[files]]
 file = "config/MouseTweaks.cfg"
 hash = "4069ce1a439d8c37453c1b1e9f2037e0942674c7e48723a39b37eab245792ad4"
 
@@ -519,26 +503,6 @@ hash = "dce9b819f6078583fe575c1f465b0c1bcda44e64edb02d367728512adf65fafe"
 [[files]]
 file = "config/ars_nouveau/rewind.toml"
 hash = "927983e00266b0b3af2d78c1d5c10e791ed052e3cd8e525cc1bdb773845e921e"
-
-[[files]]
-file = "config/ars_nouveau/search_index/_r.cfe"
-hash = "d79a3a604c7a5e9c9dc5f8cce9a21c5d43d602f1f238c3dd02677ad99c585341"
-
-[[files]]
-file = "config/ars_nouveau/search_index/_r.cfs"
-hash = "06325245bb07b3e8ef81993ab1311ef2b2df11e81cad0140732dbdaddd9c4cff"
-
-[[files]]
-file = "config/ars_nouveau/search_index/_r.si"
-hash = "23b487567ce74a39761c94bb84c9ffd471b62e2981ee46b86b45fdb45516cdb3"
-
-[[files]]
-file = "config/ars_nouveau/search_index/segments_s"
-hash = "ac78303fe6173a423fb231dffc35420fbd62c1d39b1d768ec3f8fb9b516b1088"
-
-[[files]]
-file = "config/ars_nouveau/search_index/write.lock"
-hash = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
 
 [[files]]
 file = "config/ars_nouveau/wololo.toml"
@@ -3313,10 +3277,6 @@ file = "config/watermedia.toml"
 hash = "c167ad90e6fc2b409c7683dbeac88cbfd85849b90f8df13b5446c1203c1c510c"
 
 [[files]]
-file = "config/watermedia/custom_vlc_path.txt"
-hash = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-
-[[files]]
 file = "config/waterworks-client.toml"
 hash = "a8712ee5a1edbb44fd06a84976323cc21f4dc41700a5b1890a1963a428d88cb1"
 
@@ -3399,10 +3359,6 @@ hash = "d438aea41ca41e93697e059f523686935c0add482f6abe96b532bbf10c6ed80a"
 [[files]]
 file = "config/xaerohud.txt"
 hash = "3907c52b1309c8b757eaf2e61cae4d1ad3240a6490ed77ac2c85613fe24c2978"
-
-[[files]]
-file = "config/xaeropatreon.txt"
-hash = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
 
 [[files]]
 file = "config/yacl.json5"
