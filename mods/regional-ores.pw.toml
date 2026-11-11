@@ -11,8 +11,6 @@ x-prismlauncher-version-number = 'Regional Ores 2.0.0'
 hash = '2001156e2d4a529c0a2542843dbc1bfe0fc36445'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
-url = ''
-
 [update.curseforge]
 file-id = 9101312
 project-id = 1730992

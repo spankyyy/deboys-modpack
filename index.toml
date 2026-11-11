@@ -3593,7 +3593,7 @@ metafile = true
 
 [[files]]
 file = "mods/catalogue.pw.toml"
-hash = "2a38c7998665b0ea79cf252ae42052985d3819c478d8d0aa43b6d13bd4f0e796"
+hash = "04315a6717212b1ec9aba050356a7983f022d9f845e7d559687ee10c8d834ced"
 metafile = true
 
 [[files]]
@@ -3823,7 +3823,7 @@ metafile = true
 
 [[files]]
 file = "mods/create-mob-gravity.pw.toml"
-hash = "9b0757a5f341bc0424e00778bb3714fc1b294423fc81c52c585e554fa0b9dc2b"
+hash = "12f2d844f6ccb349b2d5b39e50347099ad9b4277c1ef618fd7b0effb1543883a"
 metafile = true
 
 [[files]]
@@ -3848,7 +3848,7 @@ metafile = true
 
 [[files]]
 file = "mods/create-octo-arms.pw.toml"
-hash = "8d47021af4c915210eaf296b704d7334a75cde743f3a09d22d813b85d5f6b6d0"
+hash = "0f881a6c9ed677d6b85f0ad9124cdd51a0eb647731f4500fe05dfb7f2fdc5135"
 metafile = true
 
 [[files]]
@@ -3888,7 +3888,7 @@ metafile = true
 
 [[files]]
 file = "mods/create-step-up.pw.toml"
-hash = "cc303039c145751181057d1e6cde8b7007b6ef404bff16d16a6ac1d9a886f1e2"
+hash = "2c686ec686ecd5e081696e3612bc5d875e38009f55d0363e2f8da8e5260655e6"
 metafile = true
 
 [[files]]
@@ -4108,7 +4108,7 @@ metafile = true
 
 [[files]]
 file = "mods/immersive-portals-aeronautics.pw.toml"
-hash = "2a2d4d467b12235a0a3b2d30195288dfca607bb7c331d60d813e34302ed428fc"
+hash = "10944f92599f4773aa2a8e0d1cdc92b5892796b439011544c19dbaf074285f86"
 metafile = true
 
 [[files]]
@@ -4253,7 +4253,7 @@ metafile = true
 
 [[files]]
 file = "mods/loot-beams-rarity-light-beams-for-dropped-items.pw.toml"
-hash = "463214a9c56783c75ee378ead5583c3fa1e7a2d0a34e1f04f1f7ed85bba7aa76"
+hash = "01255d3b09eb04c4495c59d6d68e744e64f477724a78f1e8eff158a835c40ba0"
 metafile = true
 
 [[files]]
@@ -4432,7 +4432,7 @@ metafile = true
 
 [[files]]
 file = "mods/regional-ores.pw.toml"
-hash = "bbe2638d245693e0ceea1bd891e27e90b6c6dbe59834f7b4ea03c8f239225839"
+hash = "a52b8ba669033a5603a2fe14f531bd0bd51cf1e775d625035a24f1f3372fbb0b"
 metafile = true
 
 [[files]]
@@ -4521,7 +4521,7 @@ metafile = true
 
 [[files]]
 file = "mods/screw-it-too-many-keybinds.pw.toml"
-hash = "8e5dbdb2b5d89671618eaddc11414702d68ded9025511d2b35aeefca7e0228b1"
+hash = "e972225735267faa2ab648153917cd187942569c72be6bdb317fced2c46bf20b"
 metafile = true
 
 [[files]]
@@ -4531,7 +4531,7 @@ metafile = true
 
 [[files]]
 file = "mods/shadeless.pw.toml"
-hash = "52f43ba1d6e9b51b6b84ec979a921d24814e52b8efd34842cf5c9187d052e247"
+hash = "1df67190bad0ab3eac7f188cd6075912c8e8c66d68b6b023b4875cf131c86c58"
 metafile = true
 
 [[files]]
@@ -4561,7 +4561,7 @@ metafile = true
 
 [[files]]
 file = "mods/snassets-library.pw.toml"
-hash = "f4c06b031e879068baf3c4ad4f5c7b4ef59f1def776d5857cb273aabcd9c5b64"
+hash = "12e9727f69a08722d16b92e8573052961b69161bf2dbb6b2a1133120dd389606"
 metafile = true
 
 [[files]]
@@ -4646,7 +4646,7 @@ metafile = true
 
 [[files]]
 file = "mods/thaumaturge.pw.toml"
-hash = "d73542b40639fe24078642a15fdf3bead04789de1766f2cb2feb672a36b44437"
+hash = "90e2793055c43b4da864a2d46ef2620bc0ed5bdd021eeb22958e3d637b8ed718"
 metafile = true
 
 [[files]]
@@ -4661,7 +4661,7 @@ metafile = true
 
 [[files]]
 file = "mods/touch-and-motion.pw.toml"
-hash = "1673c5685f27af3e6ea27d2ad56f5818072094129ba8c9860c3928554b3c4df3"
+hash = "25bccba1cd9968b876665c637c48b38b5962de5bfaf5138197f456075dc85aa8"
 metafile = true
 
 [[files]]
@@ -4681,7 +4681,7 @@ metafile = true
 
 [[files]]
 file = "mods/uncapped-spectator-speed.pw.toml"
-hash = "be600d25775e884bc9ff750a3999ef17388ddecedda2d13f0501439f078f7d5b"
+hash = "9bf553a6d8d6048b5b6a832acd5c07987bdc9d74962caa5d1eb403d084825903"
 metafile = true
 
 [[files]]

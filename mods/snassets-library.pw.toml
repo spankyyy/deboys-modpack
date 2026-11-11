@@ -37,8 +37,6 @@ x-prismlauncher-version-number = 'SnAssets - General - V4'
 hash = '7ec3bc42fc78129548c3d873a675add1e05bba92'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
-url = ''
-
 [update.curseforge]
 file-id = 9094847
 project-id = 1592344

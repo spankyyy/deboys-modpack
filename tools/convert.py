@@ -2,6 +2,7 @@
 
 import hashlib
 import json
+import re
 import shutil
 import urllib.request
 from pathlib import Path
@@ -46,6 +47,12 @@ def main():
                 == entry[1]["download"]["hash"]
             ):
                 text = entry[0].read_text(encoding="utf-8")
+                if entry[1]["download"].get(
+                    "mode"
+                ) == "metadata:curseforge" and not entry[1]["download"].get("url"):
+                    text = re.sub(
+                        r"(?m)^url\s*=\s*(?:\x27\x27|\x22\x22)\s*\n", "", text
+                    )
                 if entry[1].get("side") not in ("client", "server", "both"):
                     text = text.replace("side = ''", "side = 'both'")
                 (target / entry[0].name).write_text(text, encoding="utf-8")

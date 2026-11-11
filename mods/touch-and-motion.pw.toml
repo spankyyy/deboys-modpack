@@ -10,8 +10,6 @@ x-prismlauncher-version-number = 'touch_n_motion_neoforge_1.21.1_1.0.5.jar'
 hash = '888c6175492105f4df7be86ad5bc0fb65332064e'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
-url = ''
-
 [update.curseforge]
 file-id = 9524859
 project-id = 1734204

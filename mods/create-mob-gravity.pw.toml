@@ -11,8 +11,6 @@ x-prismlauncher-version-number = 'create_mob_gravity-1.0.0.jar'
 hash = '932b363b785dfa14a3bd15ebd448ccbef5a7aa31'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
-url = ''
-
 [update.curseforge]
 file-id = 9089724
 project-id = 1719272

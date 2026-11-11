@@ -11,8 +11,6 @@ x-prismlauncher-version-number = 'Loot Beams 0.1.3 for Minecraft 1.21.1 (NeoForg
 hash = '68fa932f410aaff8a4bf9ce65140efc38d286876'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
-url = ''
-
 [update.curseforge]
 file-id = 9413319
 project-id = 1714472

@@ -28,9 +28,18 @@ for entry in index["files"]:
     if entry.get("metafile"):
         data = tomllib.loads(path.read_text(encoding="utf-8"))
         assert data["side"] in ("client", "server", "both")
-        assert data["download"].get("mode") == "metadata:curseforge" or data[
-            "download"
-        ]["url"].startswith("https://")
+        download = data["download"]
+        if "url" in download:
+            assert download["url"].startswith(("https://", "http://")), (
+                f"Invalid download URL: {path}"
+            )
+        else:
+            assert download.get("mode") == "metadata:curseforge", (
+                f"Missing download URL: {path}"
+            )
+        if download.get("mode") == "metadata:curseforge":
+            curseforge = data["update"]["curseforge"]
+            assert curseforge["file-id"] > 0 and curseforge["project-id"] > 0
         assert data["download"]["hash"]
 print(f"Validated {len(seen)} indexed files and pack/index hashes.")
 unresolved = json.loads((root / "UNRESOLVED.json").read_text(encoding="utf-8"))

@@ -11,8 +11,6 @@ x-prismlauncher-version-number = 'keywheel-neoforge-1.1.9-1.21.1-java21.jar'
 hash = 'c3f06c315219047b5add5ef5c68b604dce9e83d1'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
-url = ''
-
 [update.curseforge]
 file-id = 9490585
 project-id = 1569840

@@ -10,8 +10,6 @@ x-prismlauncher-version-number = 'thaumaturge-1.21.1-NeoForge-1.1.0.jar'
 hash = '89c6320f8dc0b50b72ee1e6d38314e7573beb316'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
-url = ''
-
 [update.curseforge]
 file-id = 9452543
 project-id = 1628024

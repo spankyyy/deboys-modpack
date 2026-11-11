@@ -10,8 +10,6 @@ x-prismlauncher-version-number = 'Octo Arms 1.8.0 for 1.21.1'
 hash = '5746fe93f158344c710e3832da446a51537866d6'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
-url = ''
-
 [update.curseforge]
 file-id = 9510284
 project-id = 1741356

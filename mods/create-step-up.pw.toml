@@ -10,8 +10,6 @@ x-prismlauncher-version-number = 'Create: StepUp 0.2.114'
 hash = '0dbfbe086c965cd957776f2f887ea6132ffe2bed'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
-url = ''
-
 [update.curseforge]
 file-id = 9515212
 project-id = 1787736
