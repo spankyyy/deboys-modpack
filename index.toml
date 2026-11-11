@@ -4835,3 +4835,11 @@ hash = "35ef25d5f9e8993bfa64f8045e897ba8eadbedf4557a7658876fa82a90cf9714"
 [[files]]
 file = "config/zume.json5"
 hash = "8e23412c587a2350337de184b152a297778b3760f8b40dc5c2aac29f4b7a8cd3"
+
+[[files]]
+file = "mods/make-it-compatible-voxy-1.1.1-roxy.1.jar"
+hash = "2b8df4b73229c95f897364ba2b0568539d5266c8d817bd455cad5d2cf2b85216"
+
+[[files]]
+file = "mods/sablescalablelux-1.21.1-NeoForge-1.0.0.jar"
+hash = "3686634ec1726f3838a12c1fd596bb9a93ffcea929ccf28a59e0556101966d83"

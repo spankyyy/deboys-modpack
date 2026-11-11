@@ -1,13 +1,1 @@
-[
-        {
-                "file": "mods/make-it-compatible-voxy-1.1.1-roxy.1.jar",
-                "sha512": "faed1ad37824570d76237c23cfa68337d3c473d216fe1be4e4d23d28574602756237f0cc0bcaca7fbbdc6c9281cc642235cea8eef74eabd18d9276e1d22e935b",
-                "reason": "No verified public download; supply a permitted URL with packwiz url add, or install manually."
-        },
-
-        {
-                "file": "mods/sablescalablelux-1.21.1-NeoForge-1.0.0.jar",
-                "sha512": "b2fe79a45cb9a1904f9c6e69e66906a2de6c7f8e70e962f05834cf948e8362590537a6ffac437f5863297c346a14380504222dba4dabd3487ba1e630a9eb77ea",
-                "reason": "No verified public download; supply a permitted URL with packwiz url add, or install manually."
-        }
-]
+[]

@@ -4,15 +4,18 @@ Minecraft **1.21.1**, NeoForge **21.1.265**, Java **21**.
 
 This directory is the repository root: publish **only its contents**, not the surrounding Minecraft instance. Worlds, player identities, servers.dat, logs, caches, options.txt and disabled mods are deliberately excluded. Active resource-pack ZIPs are represented by download manifests. Existing enabled resource-pack selections and key bindings are not distributed. The initial conversion preserved the original instance. Tetra and its unused dependency mutil were subsequently removed from active mods; their JARs are backed up in the parent instance's `removed-mods/tetra/` folder, outside this repository. Back up existing worlds before loading them without Tetra: its items and blocks may be lost.
 
-## Finish the migration first
+## Bundled custom mods and publication review
 
-`UNRESOLVED.json` lists two installed mods with no exact verified Modrinth match. They have NOT been silently substituted or bundled. The pack is incomplete for fresh installs until these are resolved:
+Two exact installed builds are bundled directly in `mods/` as regular indexed files:
 
-- make-it-compatible-voxy-1.1.1-roxy.1.jar
+- `make-it-compatible-voxy-1.1.1-roxy.1.jar` — metadata declares MIT; authors: leon.raineri. This is a local Roxy adaptation; its embedded `MIC-ROXY-PATCH.txt` is preserved.
+- `sablescalablelux-1.21.1-NeoForge-1.0.0.jar` — nested mod metadata declares MIT; authors: Leclowndu93150.
 
-- sablescalablelux-1.21.1-NeoForge-1.0.0.jar
+Packwiz downloads these files relative to the published pack URL; no separate Release assets or download manifests are needed. Commit both JARs together with `index.toml` and `pack.toml`. `UNRESOLVED.json` is now empty.
 
-Install the packwiz CLI following https://packwiz.infra.link/ . From this directory, use `packwiz curseforge install <project-or-file-URL>` for an exact CurseForge release, or `packwiz url add <name> <direct-HTTPS-download-URL>` for an author-approved direct source. Verify the downloaded bytes against the SHA-512 recorded in `UNRESOLVED.json`. If you have redistribution permission, GitHub Release assets can host custom JARs; link them rather than committing binaries. Do not publish private or restricted builds without permission. Remove an unresolved record only after its exact file is represented in the pack. Run `packwiz refresh` afterward.
+**Before public distribution:** neither archive contains the full MIT license/copyright notice. Obtain and include the applicable notices from the authors/source projects, and confirm coverage of the local adaptation and service wrapper. Metadata declarations alone do not supply the notices required by MIT. Technical index validation does not constitute license clearance.
+
+Install the packwiz CLI following https://packwiz.infra.link/ . Run `packwiz refresh` after changing bundled JARs or other pack files.
 
 Review `config/` before making the repository public: configuration can contain private endpoints, tokens or personal preferences. The conversion omits voicechat-server.properties but cannot guarantee every third-party configuration is safe. All selected configs are managed files and publisher edits can overwrite local customization. Review mod side declarations before using this as a dedicated-server pack; this conversion targets the existing client pack.
 
