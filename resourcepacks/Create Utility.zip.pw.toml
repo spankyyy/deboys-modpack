@@ -1,0 +1,12 @@
+name = "Create Utility"
+filename = "Create Utility.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/H6nKXXIF/versions/hodl2FuQ/Create%20Utility.zip"
+hash-format = "sha512"
+hash = "1cfb6698ffdafb760f6e8b795a5e3cece04a1556a67dea45ccc15ac0c6f6258da510c4e3af369baaa9d33154af0fe5d13e384ff4f07e59ccb67a0cc579100698"
+
+[update.modrinth]
+mod-id = "H6nKXXIF"
+version = "hodl2FuQ"

@@ -1,0 +1,179 @@
+
+[codecs]
+  # Hard cap (in MB) for image downloads consumed by TxMediaPlayer
+  # Sources above this limit are aborted before full buffering
+  # Allows math expressions
+  # Value must be greater than 1
+  maxImageSourceSize = 128
+
+[codecs.png]
+    # Decoder fails when PNG chunk data doesn't match with the CRC
+    failOnCorruptedData = true
+
+    # Present PNG and APNG pictures against the colour declared by their bKGD chunk instead of transparency
+    # When true the canvas starts filled with it, static pictures and frames blended as SOURCE are flattened onto it, and APNG dispose-to-background restores it
+    # When false transparency is kept everywhere (recommended for compositing)
+    useBKGDChunk = false
+
+[codecs.svg]
+    # Default maximum dimension (px) when rasterizing vector SVG images
+    # SVG is resolution-independent; the larger raster side is capped to this, preserving aspect ratio (never upscaled)
+    # Allows math expressions
+    # Value must be less than '8192' and greater than '1'
+    maxSize = 512
+
+[codecs.vp8]
+    # Attempt to repair VP8 frames declaring broken token partition sizes instead of failing the decode
+    # Broken sizes are clamped to the bytes actually available; empty partitions are replaced with a duplicate of the previous one or with fake zeroed data
+    # Repaired frames decode best-effort and may show visual artifacts
+    brokenTokens = false
+
+[codecs.ffmpeg]
+    # Disables the FFmpeg bootstrap; changing it requires a restart
+    disable = false
+
+    # Adds this path to the discovery path
+    # Path must not be the fat ffmpeg.exe file
+    # path must be a runtime path
+    customPath = ""
+
+    # Enables hardware-accelerated video decoding (NVDEC, QuickSync, D3D11VA, VAAPI...)
+    # Disable if you experience stutter, lag or black video; software decoding is often smoother on some GPUs (notably AMD)
+    hardwareAccel = true
+
+    # Configures how many audio packets to read per loop when the video carries a separate audio track
+    # Increment this value if you find YouTube videos with slow playback
+    # Value must be less than '12' and greater than '1'
+    trackPacketReads = 3
+
+    # Enables the on-disk HTTP media cache used by FFMediaPlayer for small files
+    cache = true
+
+    # Maximum size of a network response FFMediaPlayer keeps in the cache, in megabytes
+    # Allows math expressions
+    # Value must be greater than 1
+    cacheMaxResponse = 10
+
+    # FFMediaPlayer stream probing duration (FFmpeg analyzeduration), in milliseconds
+    # Higher values help FFmpeg detect audio/video parameters (sample rate, channels) on slow or live HLS streams, at the cost of startup latency
+    # Zero leaves FFmpeg's own default in place
+    # Value must be less than '60000' and greater than '0'
+    analyzeDuration = 7000
+
+    # FFMediaPlayer stream probing size (FFmpeg probesize), in megabytes
+    # Higher values let FFmpeg read more data while detecting stream parameters, improving codec detection on streams with sparse headers
+    # Allows math expressions
+    # Value must be greater than 1
+    probeSize = 10
+
+[network]
+  # Where the file storage server runs: OFF, DEDICATED (only on a dedicated server) or ALWAYS (also on clients)
+  # ALWAYS doesn't open the port by itself: forward it and point remoteUrl at your public IP or domain
+  # Accepted values are: [OFF, DEDICATED, ALWAYS]
+  server = "OFF"
+
+  # Address used by the file server; use a LAN address or 0.0.0.0 to accept remote clients
+  # Remote listeners require a non-default token
+  # Value must contain 
+  # Allows (non-null) empty values
+  serverBindAddress = "127.0.0.1"
+
+  # Maximum simultaneous file-server requests; further requests are refused as busy (HTTP 503)
+  # Value must be less than '256' and greater than '1'
+  maxServerRequests = 8
+
+  # Maximum idle time of a file-server request: it is cut once this long passes without headers or transfer progress
+  # Value must be less than '600000' and greater than '1000'
+  serverTimeout = 30000
+
+  # Total file-server storage budget, including uploads in progress
+  # Allows math expressions
+  # Value must be greater than 1
+  maxStorageSize = 1024
+
+  # Maximum upload file size in megabytes, files larger than this will be rejected by the server
+  # Zero means unlimited, but be careful with that if your users aren't trustworthy enough
+  # NOTE: this doesn't affect manual file uploads to the server storage folder or existing files, but only uploads through the API
+  # Used by the file server: on the server, or on a client with server = ALWAYS
+  # Allows math expressions
+  # Value must be greater than 0
+  maxUploadSize = 8
+
+  # File server port; check with your provider that it is reachable from outside before starting the server
+  # Used by the file server: on the server, or on a client with server = ALWAYS
+  # Value must be less than '65535' and greater than '1'
+  serverPort = 25572
+
+  # Sets the remote file server to upload and download files, it must match your game server IP or domain with the given port
+  # Include the scheme and port, e.g. http://your-host:25572/
+  # Used by every host that uploads through NetworkAPI, clients included
+  # Value must match with ^https?://([a-zA-Z0-9]([a-zA-Z0-9\-]*[a-zA-Z0-9])?)(\.([a-zA-Z0-9]([a-zA-Z0-9\-]*[a-zA-Z0-9])?))*(:\d{1,5})?(/.*)?$
+  # Allows (non-null) empty values
+  remoteUrl = "http://localhost:25572/"
+
+  # The token clients present to the file server, change it every time you update your server and the clients to prevent external access and bandwidth abuse
+  # Used on server-side and client-side
+  # Value must contain 
+  # Allows (non-null) empty values
+  token = "watermedia_default_token_change_it"
+
+  # Default connect/read timeout for NetRequest, in milliseconds
+  # Value must be less than '600000' and greater than '1000'
+  timeout = 15000
+
+  # Maximum number of redirect hops NetRequest will follow before aborting
+  # Value must be less than '50' and greater than '0'
+  maxRedirects = 10
+
+  # Hard cap (in bytes) for NetRequest text/JSON bodies; anything larger throws
+  # Allows math expressions
+  # Value must be greater than 1024
+  maxTextBytes = 16777216
+
+[player]
+  # Default quality for streaming media without a specified quality
+  # Accepted values are: [UNKNOWN, LOWEST, LOWER, LOW, LOWISH, MEDIUM, HIGH, HIGHER, HIGHEST, ULTRA_8K]
+  defaultQuality = "HIGHER"
+
+  # Cleanup Interval in Minutes for all expired MRL or with errors (memory saver)
+  # MRL manager usually doesn't consume much memory, intervals below 60 minutes will not reduce memory consumption at all
+  # Value must be greater than 1.0
+  mrlCleanupInterval = 60.0
+
+  # Total on-disk budget (in MB) for the shared cache of downloaded media files under %TEMP%
+  # Checked after every cache write; once the store grows past this cap the oldest entries are evicted until it fits again
+  # Allows math expressions
+  # Value must be greater than 1
+  cacheBudget = 8192
+
+[player.watertx]
+    # Enables the on-disk HTTP image cache used by TxMediaPlayer
+    cache = true
+
+    # VRAM budget (in MB) for keeping an animated image as one GL texture per frame
+    # Animations whose decoded frames fit under this budget skip per-frame streaming entirely (best performance, like v2)
+    # Set to 0 to force TxMediaPlayer to stream animated image frames into a single texture
+    # Value must be less than '512' and greater than '0'
+    texturesBudget = 32
+
+[platforms]
+  # Allow resolving streams/videos marked as mature content (e.g. Kick).
+  # When false, mature streams throw and never reach the player.
+  allowMatureContent = false
+
+  # Cleanup interval in minutes for the in-memory platform search results cache
+  # Identical searches are served from memory until the whole cache is flushed on this interval (general sweep)
+  # Set to 0 to disable caching and always query the platforms
+  # Value must be greater than 0.0
+  searchCleanupInterval = 15.0
+
+  # Results each platform may contribute to a search; a search asking for more is capped here
+  # Value must be less than '50' and greater than '1'
+  searchLimit = 2
+
+  # BiliBili session cookie for authenticated access
+  # Without it only 360p/480p are available, with a free account up to 1080p, VIP up to 8K
+  # Value should look like: SESSDATA=abc123; bili_jct=def456; DedeUserID=789
+  # Value must contain 
+  # Allows (non-null) empty values
+  biliBiliCookie = ""

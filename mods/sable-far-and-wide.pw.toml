@@ -1,0 +1,21 @@
+filename = 'sablefarandwide-1.0.0.jar'
+name = 'Sable: Far and Wide (Create Aeronautics)'
+side = 'server'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '1.0.0'
+
+[download]
+hash = 'c8d1225dec1d8f4bdc97170b59857c99350fe33d2398445ffe06bff7e5ced0a0776ece6cdcbcc5b0ef3b9496a32e7f3ac8b5c52004bfe9e84e643f66a4b99837'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/YbNLIWOy/versions/NWXrimD0/sablefarandwide-1.0.0.jar'
+
+[update.modrinth]
+mod-id = 'YbNLIWOy'
+version = 'NWXrimD0'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'T9PomCSv'
+type = 'REQUIRED'

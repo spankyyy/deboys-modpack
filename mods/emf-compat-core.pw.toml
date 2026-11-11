@@ -1,0 +1,21 @@
+filename = 'emf_compat_core_neoforge_1.21.1_2.4.0.jar'
+name = 'EMF Compat: Core'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '2.4.0'
+
+[download]
+hash = '08928236e3bb873a2c2857f0eca950198c9a85ecaf7f6a44c93042bbb2911fcd15dcc38f6ab7a769bf32a8dec342448532be8ffd5e3eda60ca6beae744999393'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/hbGct5uU/versions/upzqIWB0/emf_compat_core_neoforge_1.21.1_2.4.0.jar'
+
+[update.modrinth]
+mod-id = 'hbGct5uU'
+version = 'upzqIWB0'
+
+[[x-prismlauncher-dependencies]]
+addonId = '4I1XuqiY'
+type = 'REQUIRED'

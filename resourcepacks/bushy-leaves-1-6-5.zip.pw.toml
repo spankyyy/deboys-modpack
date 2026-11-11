@@ -1,0 +1,12 @@
+name = "bushy-leaves-1-6-5"
+filename = "bushy-leaves-1-6-5.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/XSSmFELw/versions/Nx48HzUJ/bushy-leaves-1-6-5.zip"
+hash-format = "sha512"
+hash = "2e166a7efdd365a84ef0069d96f273ff7d1fc11e0ba8ea2765bed9eb3936ed80040327e2e3dfc8109d2e6d087a54c2265e31bfcba326a4a38e5b99df8badd09c"
+
+[update.modrinth]
+mod-id = "XSSmFELw"
+version = "Nx48HzUJ"

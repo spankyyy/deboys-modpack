@@ -1,0 +1,21 @@
+filename = 'shadeless-neoforge-1.21.1-1.0.0.jar'
+name = 'Shadeless'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'Shadeless 1.0.0 (NeoForge 1.21.1)'
+
+[download]
+hash = '3d2fa2f4a63a552c013f8c766f22b7b4b8e27ba8'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 9106941
+project-id = 1734850
+
+[[x-prismlauncher-dependencies]]
+addonId = '394468'
+type = 'OPTIONAL'

@@ -1,0 +1,21 @@
+filename = 'almanac-neoforge-1.21.1-1.26.11.1.jar'
+name = 'Almanac'
+side = 'server'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '1.26.11.1'
+
+[download]
+hash = 'f7928461882dfa3ebc1d75021b44d75fd9327e2bbc92863a9638907c0d58acdab2413cd6246a31f2e590dfb8731e5f5b326f5083983d01b894c4df439d27141c'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/Gi02250Z/versions/hvOxynOa/almanac-neoforge-1.21.1-1.26.11.1.jar'
+
+[update.modrinth]
+mod-id = 'Gi02250Z'
+version = 'hvOxynOa'
+
+[[x-prismlauncher-dependencies]]
+addonId = '7C0Yf4dy'
+type = 'EMBEDDED'

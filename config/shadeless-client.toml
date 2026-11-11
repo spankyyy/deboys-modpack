@@ -1,0 +1,44 @@
+#Blocks and terrain
+[blocks]
+	#How much of the directional shading to remove from block faces, as a percent.
+	#Minecraft multiplies every face by a fixed amount decided purely by which way it points - tops
+	#stay at 1.0, north/south drop to 0.8, east/west to 0.6 and undersides to 0.5 - before any light
+	#level is considered. 100 removes that completely and every face sits at the flat level below,
+	#which is the unshaded look; 0 leaves the game exactly as it was. In between keeps some of the
+	#relief, which is usually what people actually want.
+	#Light level still applies at any setting, so caves are still dark.
+	#Applies to terrain rendered by Sodium too: its lighting pipelines ask the world for the same
+	#value. Needs a chunk rebuild to show up - press F3+A after changing it.
+	# Default: 100
+	# Range: 0 ~ 100
+	shadingStrength = 100
+	#The brightness every face settles on once the shading is removed, as a percent.
+	#This is the setting that decides whether flat looks RIGHT or looks like full bright, and getting
+	#it wrong is the usual reason 'shadeless' reads as 'everything is glowing'. Flattening to 100
+	#does not merely remove the shading - it drags every side up to the brightness of a top face, and
+	#undersides up from 0.5, so the whole world gets brighter as well as flatter.
+	#80 is the default because it is what the game already uses for north/south faces, and close to
+	#the average of the faces you can actually see on a cube - so the world goes flat without going
+	#brighter. Lower if it still reads too bright. Needs a chunk rebuild (F3+A).
+	# Default: 80
+	# Range: 30 ~ 100
+	flatLevel = 100
+	#Light blocks as if fully lit, ignoring the actual light level - caves and night stop being dark.
+	#This is NOT the same as the option above and does not remove directional shading on its own.
+	#Covers terrain and block entities together: the game works both out through one call, so they
+	#cannot be separated here, and brightening a chest without the room around it looks worse than
+	#either extreme anyway. Needs a chunk rebuild (F3+A).
+	fullBright = false
+
+#Mobs, players and items
+[entities]
+	#Draw mobs, players and dropped items at full brightness wherever they are, instead of taking
+	#the light level of the block they stand in. This is what stops a mob going black in an unlit
+	#room or at night.
+	#OFF by default: this is full bright, not shadeless, and it is a strong look - mobs stop reacting
+	#to light at all. Turn it on only if that is what you actually want.
+	#Note it does not remove the soft top-to-bottom gradient a model gets from the game's diffuse
+	#lighting - that is applied in the entity shader from each surface's normal, and cannot be
+	#switched off without replacing the shader itself. Full bright is the only lever this mod has
+	#over mobs; with it off, Shadeless affects blocks only.
+	fullBright = false

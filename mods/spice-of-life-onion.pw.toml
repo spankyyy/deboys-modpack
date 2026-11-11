@@ -1,0 +1,21 @@
+filename = 'Spice of Life Onion_NEOFORGE_v1.5.7_mc1.21.1.jar'
+name = 'Spice of Life Onion'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '1.5.7'
+
+[download]
+hash = '16d955c1ac6934b993f26df5cde93fcfec00b7630a91ff53271e495b6f6ca1a47f41d8e587c89593cf5c3706a8891aa6ea36c12ab462966c83875077601f0ac3'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/eHGYGKJz/versions/PtXSNLlv/Spice of Life Onion_NEOFORGE_v1.5.7_mc1.21.1.jar'
+
+[update.modrinth]
+mod-id = 'eHGYGKJz'
+version = 'PtXSNLlv'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'OsZiaDHq'
+type = 'REQUIRED'

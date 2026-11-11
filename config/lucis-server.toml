@@ -1,0 +1,30 @@
+#Enable Lucis light engine hooks
+enabled = true
+#Owned region size in chunks per axis
+# Default: 1
+# Range: 1 ~ 16
+regionChunks = 1
+#Read-only halo size in chunks
+# Default: 0
+# Range: 0 ~ 2
+haloChunks = 0
+#Max chunks per runtime batch
+# Default: 64
+# Range: 1 ~ 512
+maxBatchChunks = 64
+#Max runtime-owned regions kept in memory
+# Default: 128
+# Range: 1 ~ 4096
+maxCachedRegions = 128
+#Replace worldgen light with Lucis
+enableWorldgen = true
+#Replace block update light with Lucis
+enableRuntime = true
+#Compute skylight in Lucis
+enableSky = true
+#Compute block light in Lucis
+enableBlock = true
+#Extra engine diagnostics
+verboseLogging = false
+#Enable debug-only metrics and diagnostics
+debug = false

@@ -1,0 +1,25 @@
+filename = 'UniversalBoneMeal-v21.1.0-1.21.1-NeoForge.jar'
+name = 'Universal Bone Meal'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'v21.1.0-1.21.1-NeoForge'
+
+[download]
+hash = '6569e6283ac424290e0b941bca5feb61c35c3a770ccd5a94fab64286423e2a36e60aa742c708b40be35c100f7ddb252bdf76ab26aabf8c7346b24614e8946fe2'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/66VIiT1y/versions/5g9aZDW0/UniversalBoneMeal-v21.1.0-1.21.1-NeoForge.jar'
+
+[update.modrinth]
+mod-id = '66VIiT1y'
+version = '5g9aZDW0'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'QAGBst4M'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '5WeWGLoJ'
+type = 'OPTIONAL'

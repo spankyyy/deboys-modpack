@@ -1,0 +1,25 @@
+filename = 'ApothicAttributes-1.21.1-2.11.0.jar'
+name = 'Apothic Attributes'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '1.21.1-2.11.0'
+
+[download]
+hash = '568580e68016161151fc0254fb0da949b42cf285fa2bf7c3aec1cd320405c430483e9eb990aaddef537bfac4aa4beb21db82fbff9249131e05b15063b6839611'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/DGaH8Rh0/versions/64fZbLnj/ApothicAttributes-1.21.1-2.11.0.jar'
+
+[update.modrinth]
+mod-id = 'DGaH8Rh0'
+version = '64fZbLnj'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'tCkE8p2N'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'vvuO3ImH'
+type = 'OPTIONAL'

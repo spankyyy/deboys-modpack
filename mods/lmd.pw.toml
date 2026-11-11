@@ -1,0 +1,21 @@
+filename = 'letmedespawn-neoforge-1.21.1-1.26.11.1.jar'
+name = 'Let Me Despawn'
+side = 'server'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '1.26.11.1'
+
+[download]
+hash = '559e21f3d00d7a1c8a1505fb7716149d54c0ade9e4009778ea42752b89e3482e443f81541d09801c6f89bdf0858f8c3f220be87b7b9cba8eb0ca0c5e6d2c202a'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/vE2FN5qn/versions/83U4ROV4/letmedespawn-neoforge-1.21.1-1.26.11.1.jar'
+
+[update.modrinth]
+mod-id = 'vE2FN5qn'
+version = '83U4ROV4'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'Gi02250Z'
+type = 'REQUIRED'

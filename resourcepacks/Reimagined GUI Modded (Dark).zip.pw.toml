@@ -1,0 +1,12 @@
+name = "Reimagined GUI Modded (Dark)"
+filename = "Reimagined GUI Modded (Dark).zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/6V34Kurt/versions/gQD06vcH/Reimagined%20GUI%20Modded%20%28Dark%29.zip"
+hash-format = "sha512"
+hash = "b139d538e8c2b750ff51c9c819253f030ef8c75ddc9d37208013a6cd8d6884a27b513488b6e9a783f84b7e9560fb629e804eab8ea31c1008f2397d4ee9f1d0a6"
+
+[update.modrinth]
+mod-id = "6V34Kurt"
+version = "gQD06vcH"

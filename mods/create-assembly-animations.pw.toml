@@ -1,0 +1,21 @@
+filename = 'create_assembly_animation-2.0.1.jar'
+name = 'Create: Assembly Animations'
+side = 'client'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '2.0.1'
+
+[download]
+hash = '8013e638727c1571f7faca25c20a765f3c891da10f2b8c94208d58c8b03c0cbabe2d8b698e1fe2bd0255778151fe1c4d074777e33087652c5cb753717225eff2'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/6zLtAhej/versions/DiQZ7kq7/create_assembly_animation-2.0.1.jar'
+
+[update.modrinth]
+mod-id = '6zLtAhej'
+version = 'DiQZ7kq7'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'oWaK0Q19'
+type = 'REQUIRED'

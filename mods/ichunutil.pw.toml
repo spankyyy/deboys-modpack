@@ -1,0 +1,18 @@
+filename = 'iChunUtil-1.21-NeoForge-1.0.3.jar'
+name = 'iChunUtil'
+side = 'both'
+x-prismlauncher-dependencies = []
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21', '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '1.0.3'
+
+[download]
+hash = 'f91fd9d81639364ef13a796fdbfebf9d67ba1ca946d7ddacfade98c085dfac3097d9440ee16fb3f7b7fa22c6a75c6ff5cb0cfd57024144ec41ff12b9036ea11f'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/W6ROj0Hl/versions/OvIyyNh4/iChunUtil-1.21-NeoForge-1.0.3.jar'
+
+[update.modrinth]
+mod-id = 'W6ROj0Hl'
+version = 'OvIyyNh4'

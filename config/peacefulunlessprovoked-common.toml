@@ -1,0 +1,12 @@
+#If true, hostile mobs ignore players until a player attacks them.
+enabled = true
+#How long a hostile mob stays provoked after a player hits it, in ticks. 20 ticks is one second.
+# Default: 400
+# Range: > 1
+provokeDuration = 400
+#Entity type ids that always attack and are never pacified. Example: minecraft:warden
+excludedMobs = ["minecraft:ender_dragon", "minecraft:wither", "minecraft:warden"]
+#If true, an unprovoked hostile mob cannot keep or gain a player as its target.
+clearTarget = true
+#If true, an unprovoked neutral mob loses its anger timer and anger target.
+clearNeutralAnger = true

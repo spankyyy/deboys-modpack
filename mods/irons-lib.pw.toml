@@ -1,0 +1,18 @@
+filename = 'irons_lib-1.21.1-2.3.0.jar'
+name = "Iron's Lib"
+side = 'both'
+x-prismlauncher-dependencies = []
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '1.21.1-2.3.0'
+
+[download]
+hash = '74c609a583af1547c36ad39a7f89074a221f106fad5a246810d4921f91d0fc2df5660ef75f47f33e5f546cc51147d78ecbcff883da4a53f24002311697d0a99b'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/9nfaJPtX/versions/dgH7P81J/irons_lib-1.21.1-2.3.0.jar'
+
+[update.modrinth]
+mod-id = '9nfaJPtX'
+version = 'dgH7P81J'

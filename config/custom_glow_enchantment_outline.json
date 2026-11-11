@@ -1,0 +1,169 @@
+{
+  "outlineEnabled": true,
+  "outlineThickness": 3,
+  "colorHex": "#D088FC",
+  "rainbowMode": "off",
+  "rainbowSpeed": 0.5,
+  "durabilityAlertEnabled": true,
+  "displayMode": "all",
+  "whitelist": [
+    {
+      "id": "minecraft:wooden_sword",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:stone_sword",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:iron_sword",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:golden_sword",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:diamond_sword",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:netherite_sword",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:wooden_pickaxe",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:stone_pickaxe",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:iron_pickaxe",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:golden_pickaxe",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:diamond_pickaxe",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:netherite_pickaxe",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:wooden_axe",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:stone_axe",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:iron_axe",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:golden_axe",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:diamond_axe",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:netherite_axe",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:wooden_shovel",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:stone_shovel",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:iron_shovel",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:golden_shovel",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:diamond_shovel",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:netherite_shovel",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:wooden_hoe",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:stone_hoe",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:iron_hoe",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:golden_hoe",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:diamond_hoe",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:netherite_hoe",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:bow",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:crossbow",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:trident",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:mace",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:shield",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:fishing_rod",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:shears",
+      "ignoreEnchantment": false
+    },
+    {
+      "id": "minecraft:totem_of_undying",
+      "ignoreEnchantment": true
+    }
+  ],
+  "shieldEnabled": true,
+  "totemEnabled": true,
+  "totemThickness": 3,
+  "totemColorHex": "#FFF3A5",
+  "totemRainbowMode": "off",
+  "totemRainbowSpeed": 0.5
+}

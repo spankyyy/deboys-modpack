@@ -1,0 +1,13 @@
+[physics]
+	#Thrust (Sable force units) the small water wheel produces at full speed.
+	# Default: 30.0
+	# Range: 0.0 ~ 1.7976931348623157E308
+	smallWheelThrust = 30.0
+	#Thrust (Sable force units) the large water wheel produces at full speed.
+	# Default: 90.0
+	# Range: 0.0 ~ 1.7976931348623157E308
+	largeWheelThrust = 90.0
+	#RPM at which a wheel is considered to be running at 'full speed' (thrust is scaled linearly below this).
+	# Default: 16.0
+	# Range: 0.1 ~ 1000.0
+	waterflowReference = 16.0

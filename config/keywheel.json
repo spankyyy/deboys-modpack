@@ -1,0 +1,37 @@
+{
+  "schema": 3,
+  "compatKeyEvents": true,
+  "armOnRelease": false,
+  "activeProfile": 0,
+  "profiles": [
+    {
+      "name": "Profile 1",
+      "active": 0,
+      "pages": [
+        {
+          "name": "Page 1",
+          "icon": "minecraft:light",
+          "count": 6,
+          "slots": {
+            "0": {
+              "keybind": "key.sophisticatedbackpacks.open_backpack"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "active": 0,
+  "pages": [
+    {
+      "name": "Page 1",
+      "icon": "minecraft:light",
+      "count": 6,
+      "slots": {
+        "0": {
+          "keybind": "key.sophisticatedbackpacks.open_backpack"
+        }
+      }
+    }
+  ]
+}

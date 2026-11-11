@@ -1,0 +1,34 @@
+#Approximate width (in blocks) of one ore region. Smaller = patchier, larger = more distant 'provinces'.
+# Default: 384.0
+# Range: 64.0 ~ 4096.0
+regionSize = 384.0
+#Ore generation multiplier in the POOREST regions for a resource (1.0 = vanilla rate).
+#Keep above 0 so every ore can still be found everywhere, just rarely.
+# Default: 0.15
+# Range: 0.01 ~ 1.0
+poorRegionMultiplier = 0.15
+#Ore generation multiplier in the RICHEST regions for a resource (1.0 = vanilla rate).
+# Default: 4.0
+# Range: 1.0 ~ 20.0
+richRegionMultiplier = 4.0
+#How strongly vein size follows the regional multiplier.
+#Vein size = vanilla size * multiplier^exponent. 0 = vanilla sizes everywhere, 0.4 = default, 1 = very strong.
+# Default: 0.4
+# Range: 0.0 ~ 1.0
+veinSizeExponent = 0.4
+#Set to false to stop raw ore blocks from appearing in rich veins.
+enableRawBlocks = true
+#Multiplier above which veins start containing raw ore blocks (raw iron block, etc).
+# Default: 2.0
+# Range: 1.0 ~ 20.0
+rawBlockThreshold = 2.0
+#Fraction of a vein's ore blocks turned into raw ore blocks at the richest possible region. 0 disables raw blocks.
+# Default: 0.15
+# Range: 0.0 ~ 1.0
+rawBlockMaxChance = 0.15
+#Resources that never get raw/storage blocks in their veins, even in rich regions.
+#Default keeps diamonds, emeralds and ancient debris from being handed out as blocks.
+rawBlockExcludedResources = ["minecraft:diamond", "minecraft:emerald", "minecraft:ancient_debris"]
+#Resources that should NOT be made regional, e.g. ["minecraft:coal", "minecraft:emerald"].
+#A resource id is the ore block id without 'deepslate_' and '_ore', so create:zinc_ore -> "create:zinc".
+excludedResources = []

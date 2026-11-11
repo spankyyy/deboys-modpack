@@ -1,0 +1,7 @@
+{
+  "reflexEnabled": true,
+  "showLatencyMetrics": true,
+  "timelineDiagram": true,
+  "enableDiagnosticLogging": false,
+  "manualSleepOffsetMs": 0.0
+}

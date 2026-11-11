@@ -1,0 +1,2 @@
+#Prevent spectators from dying in the void.
+prevent_spectator_death = true

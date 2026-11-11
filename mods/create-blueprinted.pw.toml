@@ -1,0 +1,26 @@
+filename = 'create_blueprinted-2.2.6.jar'
+name = 'Create: Blueprinted'
+side = 'client'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '2.2.6+mc1.21.1-neoforge'
+
+[download]
+hash = '58d7987f3036d9cf1929b44766374a8dd72f59ff6f1093b9c98c5ccdc36b6acda62d3f0aa80caca029f90da88c05b6623f6a41e217376cdbfeb40aeb688764af'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/nJM6buSc/versions/NYw719l6/create_blueprinted-2.2.6.jar'
+
+[update.modrinth]
+mod-id = 'nJM6buSc'
+version = 'NYw719l6'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'LNytGWDc'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '7ljLUpZn'
+type = 'EMBEDDED'
+version = 'T4SAucD6'

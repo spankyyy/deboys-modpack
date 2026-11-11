@@ -1,0 +1,10 @@
+#Cap spectator speed.
+cap_spectator_speed = false
+#Maximum spectator speed.
+# Default: 0.2
+# Range: 0.0 ~ 1.7976931348623157E308
+maximum_spectator_speed = 0.2
+#Speed gained per scroll tick. Higher = faster.
+# Default: 1.0
+# Range: 0.0 ~ 1.7976931348623157E308
+scroll_speed_multiplier = 1.0

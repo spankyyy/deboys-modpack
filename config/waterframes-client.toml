@@ -1,0 +1,16 @@
+[waterframes]
+	#Routes display audio through Minecraft's sound engine
+	#Displays become regular game sounds: Jukebox/Note Blocks volume applies and other mods can detect and customize them (e.g. Sound Physics)
+	#Disable to drive the OpenAL source directly like older versions
+	soundEngineIntegration = true
+
+	#Configurations to override server config
+	[waterframes.overrideConfig]
+		#Enables the option
+		enable = false
+		#overrides 'waterframes.rendering.keepRendering'
+		#Enables media processing and rendering, disabling it will not render nothing, you can still hear videos
+		keepRendering = false
+		#Enables compatibility with shaders
+		#This is not enabled by default because i am tired
+		shaderMode = false

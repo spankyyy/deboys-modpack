@@ -1,0 +1,18 @@
+[shrinking]
+	#Blocks that stop a sublevel from shrinking below 1x, on top of the #pym:noshrink tag.
+	#Use full registry ids, for example ["create:steam_engine"].
+	noShrinkBlocks = []
+	#The most blocks a sublevel may hold while it is below 1x. 2147483647 means no limit.
+	# Default: 2147483647
+	# Range: > 1
+	shrunkBlockLimit = 2147483647
+
+[entities]
+	#Whether mobs and players standing on a sublevel resize with it.
+	#Armor stands, paintings, item frames and displays always follow.
+	resizeEntitiesWithSublevels = true
+
+[experimental]
+	#Experimental Simurail support: train cars follow a resized track, and rail guides
+	#neither carry a resize nor get their limits scaled twice.
+	simurailSupport = false

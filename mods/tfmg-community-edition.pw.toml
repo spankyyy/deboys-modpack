@@ -1,0 +1,38 @@
+filename = 'tfmg-1.21.1-1.3.3a-community.jar'
+name = 'Create: The Factory Must Grow'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '1.3.3a'
+
+[download]
+hash = 'fe59e45a6da83bad2afbec3b0f434b8791f317edefe6b53213e8dc3f75f4c8c0f37823f40ce9af463165952b983b908ad1974d4b8704e08687571925c9584d66'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/hC1xYvnS/versions/o8aSx7yp/tfmg-1.21.1-1.3.3a-community.jar'
+
+[update.modrinth]
+mod-id = 'hC1xYvnS'
+version = 'o8aSx7yp'
+
+[[x-prismlauncher-dependencies]]
+addonId = '71o627pK'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'vvuO3ImH'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'T9PomCSv'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'LNytGWDc'
+type = 'REQUIRED'
+version = 'UjX6dr61'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'USgVjXsk'
+type = 'INCOMPATIBLE'

@@ -1,0 +1,12 @@
+name = "§b§lSpectator Xray §7v1.2.1"
+filename = "§b§lSpectator Xray §7v1.2.1.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/u6RWzf7M/versions/uLQMkfCi/%C2%A7b%C2%A7lSpectator%20Xray%20%C2%A77v1.2.1.zip"
+hash-format = "sha512"
+hash = "356fa425562e8a8afd803e81e4bfb9c1becebf9ec6cd03e81fa66748901d17056603761ab9dc12e154d6c59c5aa56111f59ff19a248005a1f146d44f5902a5e1"
+
+[update.modrinth]
+mod-id = "u6RWzf7M"
+version = "uLQMkfCi"

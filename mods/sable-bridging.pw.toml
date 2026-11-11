@@ -1,0 +1,22 @@
+filename = 'sablebridging-1.0.3-all.jar'
+name = 'Sable Bridging'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '1.0.3'
+
+[download]
+hash = '4108d290754bc4ec603c26f1a5af5ed73ffde28d0d0e58a32720e1ff7117b7276cc80a1c57619d900ac0282ef371b4258ce142a9ce9c5e78ef347cd446958467'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/CLt069Ds/versions/djQA2Z3A/sablebridging-1.0.3-all.jar'
+
+[update.modrinth]
+mod-id = 'CLt069Ds'
+version = 'djQA2Z3A'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'T9PomCSv'
+type = 'OPTIONAL'
+version = 'hyQUls27'

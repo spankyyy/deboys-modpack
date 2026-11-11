@@ -1,0 +1,106 @@
+	#Client presentation settings. Physics is configured on the server.
+	[rendering.quality]
+		#Sail render distance in blocks. Default 256; range 32-1024. Applies to mounted and rigged sails, independently of ocean quality presets. Higher distances cost more rendering time. Chunks/ships must still be loaded by Minecraft.
+		# Default: 256
+		# Range: 32 ~ 1024
+		sailRenderDistance = 256
+		#Waterworks ship detail render distance in blocks: rigging, ratlines, anchor chains, mooring lines, helm, dive controls, alarm dials and bulkheads. Default 256; range 32-1024. Independent of ocean quality presets. Higher distances cost more rendering time; chunks/ships must still be loaded.
+		# Default: 256
+		# Range: 32 ~ 1024
+		shipDetailRenderDistance = 256
+		#Water clipping detail around ship boundaries. Default 16. Lower values reduce geometry but can show coarse edges or small leaks; 8 is a performance compromise, 32 costs more. Does not change room detection or flooding.
+		# Default: 16
+		# Range: 4 ~ 32
+		waterOcclusionEdgeSubdivisions = 16
+		#Client visual preset only. CUSTOM uses the individual radius and particle controls. LOW: 3/2 chunks and 16 particles; BALANCED or MEDIUM: 6/3 and 48; HIGH: 8/4 and 96; CINEMATIC follows Minecraft distance and allows 192. First radius is standalone, second is Iris. Physics is unchanged.
+		#Allowed Values: CUSTOM, LOW, MEDIUM, BALANCED, HIGH, CINEMATIC
+		oceanQuality = "BALANCED"
+		#Client ocean effect budget, up to 1024. Default 48; try 192 or 384 for dense spray, foam and mist. Higher values cost more rendering time. 0 disables budgeted effects. Requires CUSTOM quality; does not change buoyancy or waves. Ship limits and live particle caps still apply.
+		# Default: 48
+		# Range: 0 ~ 1024
+		oceanVfxBudget = 48
+		#Native ocean detail radius in chunks. Controls deep-water mesh reduction, capped at 6 chunks plus a transition ring. Water always covers the full Minecraft render distance. 0 uses the automatic detail radius. Requires CUSTOM quality.
+		# Default: 6
+		# Range: 0 ~ 64
+		oceanRenderDistance = 6
+		#Iris ocean detail radius in chunks. Controls deep-water mesh reduction; never shortens water coverage. Default 3; 0 uses the automatic detail radius. Requires CUSTOM quality.
+		# Default: 3
+		# Range: 0 ~ 64
+		oceanShaderRenderDistance = 3
+
+	#Client presentation settings. Physics is configured on the server.
+	[rendering.performance]
+		#Legacy chunk-job scheduling thread cap. Current surface world reads and GPU uploads remain on the client thread. Increasing this is not a general FPS fix; tune the mesh time budget instead.
+		# Default: 6
+		# Range: 1 ~ 24
+		chunkBuilderThreadCount = 6
+		#Mesh preparation time target per client tick, in milliseconds. Default 2. Lower to 1 for smoother ticks while chunks catch up more slowly; raise to 4 for faster loading. Does not reduce mesh quality. A single cell or GPU upload can exceed this target.
+		# Default: 2.0
+		# Range: 0.25 ~ 8.0
+		surfaceRebuildBudgetMillis = 2.0
+
+	#Client presentation settings. Physics is configured on the server.
+	[rendering.soundAndCamera]
+		whirlpoolAudio = true
+		#Restrained cosmetic camera roll in strong currents; does not move the player.
+		whirlpoolCameraEffects = false
+		#Ocean sound volume multiplier. 0 mutes ocean ambience; default 0.7. Independent of physics and render quality.
+		# Default: 0.7
+		# Range: 0.0 ~ 2.0
+		oceanSoundIntensity = 0.7
+
+	#Client presentation settings. Physics is configured on the server.
+	[rendering.waterAppearance]
+		#Hull/wave impact splash size, 0.5 to 4. Default 1; try 2 for large bow splashes or 3 for dramatic impacts. Expands spray width and increases launch height; affects visuals only, not wave height or ship forces. Independent of quality preset.
+		# Default: 1.0
+		# Range: 0.5 ~ 4.0
+		impactSplashSize = 1.0
+		#Hull/wave impact particle count multiplier, 0.5 to 4. Default 1; try 2 with oceanVfxBudget 192+ and shipMaxParticlesPerTick 64+. Density remains limited by these budgets. Independent of quality preset.
+		# Default: 1.0
+		# Range: 0.5 ~ 4.0
+		impactSplashDensity = 1.0
+		#Clip custom ocean waves inside ships. Disable to troubleshoot wave holes without disabling dry-room gameplay protection. Keep server waterOcclusionEnabled true. Does not disable vanilla fluid clipping.
+		waveOcclusionEnabled = true
+		#Red light absorption per block for the standalone ocean. Default 0.24. Higher values remove red faster with depth. Iris packs control their own water shading.
+		# Default: 0.24
+		# Range: 0.001 ~ 2.0
+		oceanAbsorptionRed = 0.24
+		#Green light absorption per block. Default 0.09. Higher values remove green faster with depth; lower values retain it.
+		# Default: 0.09
+		# Range: 0.001 ~ 2.0
+		oceanAbsorptionGreen = 0.09
+		#Blue light absorption per block. Default 0.065. Higher values remove blue faster with depth; lower values retain it.
+		# Default: 0.065
+		# Range: 0.001 ~ 2.0
+		oceanAbsorptionBlue = 0.065
+		#Standalone water murkiness. Default 0.25. Increase for more turbid water; does not improve physics accuracy.
+		# Default: 0.25
+		# Range: 0.0 ~ 4.0
+		oceanTurbidity = 0.25
+		#Standalone deep-water body opacity. Default 0.86; lower values make the surface more transparent. Shallows retain a visible tint, while foam and grazing reflections can be opaque. Iris packs may interpret transparency differently. This is appearance, not a performance budget.
+		# Default: 0.86
+		# Range: 0.65 ~ 1.0
+		oceanOpacity = 0.86
+		#Water visibility scale in blocks. Controls gradual surface absorption and underwater sight range. Default 12; larger values reveal more seabed. Shallow water retains a visible tint; visibility falls to at most 4.5 blocks during deep dives. Shader packs control their own surface shading. Does not alter physics.
+		# Default: 12.0
+		# Range: 4.0 ~ 64.0
+		oceanDepthVisibility = 12.0
+
+	#Client presentation settings. Physics is configured on the server.
+	[rendering.general]
+		#Enable the custom wave surface. Disable for troubleshooting rendering compatibility; server buoyancy and flooding settings are separate.
+		oceanRendering = true
+		#Show coarse distant Sable ship silhouettes through the optional DH custom-object API. Requires server distantShipBroadcast. Does not extend full ship/entity tracking.
+		distantShipLods = true
+		#Animate sea-level water in Distant Horizons 3.3.3 native OpenGL terrain. Shader packs retain their own DH shaders. Does not add mesh detail or guarantee seamless coastal boundaries.
+		distantOceanWaves = true
+		#Show ocean diagnostics. Useful for comparing draw/vertex counts and rebuild backlog while tuning; disable for normal play.
+		oceanDebug = false
+
+	[rendering.atmosphere]
+		#Slowly rolling grey-blue air mist during rain and thunder. Clears gradually after weather ends. Excludes underwater views, dark caves and sealed dry ship interiors. Independent of ocean rendering; shader packs may override vanilla fog.
+		stormMistEnabled = true
+		#Storm mist strength. 0 disables the visual effect, 1 is normal, 2 is denser. Thunder is thicker than rain. Does not change existing underwater or blindness fog.
+		# Default: 1.0
+		# Range: 0.0 ~ 2.0
+		stormMistStrength = 1.0

@@ -1,0 +1,21 @@
+filename = 'uncappedspectatorspeed-neoforge-1.1-1.21.1.jar'
+name = 'Uncapped Spectator Speed'
+side = 'server'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'uncappedspectatorspeed-neoforge-1.1-1.21.1.jar'
+
+[download]
+hash = 'e96e1eeab0c7e36210c0c1676afb946b665d9551'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 9022765
+project-id = 1529130
+
+[[x-prismlauncher-dependencies]]
+addonId = '419699'
+type = 'REQUIRED'

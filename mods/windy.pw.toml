@@ -1,0 +1,21 @@
+filename = 'windy-1.1.1+1.21-neoforge.jar'
+name = 'Windy'
+side = 'client'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21', '1.21.1', '1.21.2', '1.21.3', '1.21.4', '1.21.5', '1.21.6', '1.21.7', '1.21.8' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '1.1.1+1.21-neoforge'
+
+[download]
+hash = '01e3aacc6dd41e837943454a3a8d60717d8958832e3053e329de6dd44c65c958111f579918683da4887b0cca9677398b42edf9d2660f0ad566752ddf80977f29'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/EwYg6C78/versions/xcBfBf8H/windy-1.1.1%2B1.21-neoforge.jar'
+
+[update.modrinth]
+mod-id = 'EwYg6C78'
+version = 'xcBfBf8H'
+
+[[x-prismlauncher-dependencies]]
+addonId = '1eAoo2KR'
+type = 'REQUIRED'

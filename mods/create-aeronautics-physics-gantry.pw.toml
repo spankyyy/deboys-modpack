@@ -1,0 +1,32 @@
+filename = 'createaerophysicsgantry-1.2.0.jar'
+name = 'Create Aeronautics Physics Gantry'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '1.2.0'
+
+[download]
+hash = '7f38697e594e813956a83f6ff641d9c7bd87ae3928d55fb561ace0cff5ef0732ee643309b726b1721eca5a9bee54bd252471994d90c4a9f9f4137c78a433b1d3'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/tptzZZl3/versions/8Im339l1/createaerophysicsgantry-1.2.0.jar'
+
+[update.modrinth]
+mod-id = 'tptzZZl3'
+version = '8Im339l1'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'oWaK0Q19'
+type = 'REQUIRED'
+version = '44pLdPGg'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'T9PomCSv'
+type = 'REQUIRED'
+version = 'OLG7vDD6'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'LNytGWDc'
+type = 'REQUIRED'
+version = 'UjX6dr61'

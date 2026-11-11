@@ -1,0 +1,40 @@
+filename = 'roxy-1.21.1-NeoForge-0.4.1.jar'
+name = 'Roxy'
+side = 'client'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'beta'
+x-prismlauncher-version-number = '0.4.1-neoforge+mc1.21.1'
+
+[download]
+hash = 'ed9d4257e43ca4eeb6cf2c0188f0f359c4b90f84650bba44971a1e7b2d4470f9113d46fc6de86b1de5bdf9a26bc6511ba42149f1a9ba3ca92bbd52eca87c5c88'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/Ap78bKTp/versions/VnJRhuAn/roxy-1.21.1-NeoForge-0.4.1.jar'
+
+[update.modrinth]
+mod-id = 'Ap78bKTp'
+version = 'VnJRhuAn'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'WuGVWUF2'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'fxxUqruK'
+type = 'REQUIRED'
+version = 'H3w2nVdU'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'AANobbMI'
+type = 'REQUIRED'
+version = 'S3DUMfBo'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'wGoQDPN5'
+type = 'INCOMPATIBLE'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'Aqlf1Shp'
+type = 'REQUIRED'
+version = 'dAxle9F7'

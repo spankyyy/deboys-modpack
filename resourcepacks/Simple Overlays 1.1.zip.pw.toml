@@ -1,0 +1,12 @@
+name = "Simple Overlays 1.1"
+filename = "Simple Overlays 1.1.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/wwyTVU7K/versions/3WPja4EI/Simple%20Overlays%201.1.zip"
+hash-format = "sha512"
+hash = "45cbb08844da9533d2fe97c9572d2f8a7238565dd666b437f209c76f059656bf8811913e3d8d1a0f4d957f2292f12e8232abd79b76822074590f6096fa767a2a"
+
+[update.modrinth]
+mod-id = "wwyTVU7K"
+version = "3WPja4EI"

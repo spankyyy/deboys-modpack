@@ -1,0 +1,10 @@
+# Repository tooling and documentation must not be installed into Minecraft.
+.git/**
+.github/**
+tools/**
+README.md
+UNRESOLVED.json
+.gitignore
+.packwizignore
+packwiz.exe
+packwiz-installer-bootstrap.jar

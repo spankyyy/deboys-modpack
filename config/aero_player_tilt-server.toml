@@ -1,0 +1,20 @@
+tiltMobs = true
+tiltItems = true
+#BLACKLIST: mobList is never tilted. WHITELIST: only mobList is tilted.
+#Allowed Values: BLACKLIST, WHITELIST
+mobListMode = "BLACKLIST"
+#Mob ids, "#" tags or "modid:*", e.g. ["minecraft:cow", "#minecraft:raiders", "alexsmobs:*"]
+mobList = []
+#BLACKLIST: itemList is never tilted. WHITELIST: only itemList is tilted.
+#Allowed Values: BLACKLIST, WHITELIST
+itemListMode = "BLACKLIST"
+#Dropped item ids, "#" tags or "modid:*", e.g. ["minecraft:diamond", "#minecraft:swords"]
+itemList = []
+#Allowed Values: WORLD, DECK
+deckGravity = "DECK"
+enforceMaxTilt = false
+# Default: 0.8
+# Range: 0.0 ~ 1.0
+maxTilt = 0.8
+allowMagneticBoots = true
+allowStickyTilt = true

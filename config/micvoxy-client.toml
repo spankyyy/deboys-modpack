@@ -1,0 +1,452 @@
+#Voxy x Simple Clouds compatibility
+[voxy_simpleclouds]
+	#Match Simple Clouds' render distance to Voxy's render distance.
+	matchRenderDistance = true
+	#When matching is on, render clouds out to this percent of Voxy's render distance.
+	#100 = exactly Voxy's distance; 50 = half (clouds end well before the LOD horizon); 200 = double.
+	#Simple Clouds still clamps to its own cloud-area maximum, so very high values cap out there.
+	# Default: 100
+	# Range: 10 ~ 400
+	cloudRenderPercent = 100
+	#Hard cap on the matched cloud render distance, in blocks (applied AFTER the percent above).
+	#0 = no cap (let clouds follow Voxy all the way out). Voxy's LOD reaches very far (its default
+	#16 sections = 8192 blocks), and matching clouds that far means Simple Clouds meshes a huge cloud
+	#volume every frame. Lowering this trims the far cloud chunks for extra headroom. Try ~4096 if you
+	#want clouds far but not all the way to the LOD horizon.
+	# Default: 0
+	# Range: 0 ~ 16384
+	cloudRenderDistanceMaxBlocks = 0
+	#Render clouds behind Voxy's LOD terrain (force the depth-tested, draw-after-terrain pipeline
+	#so distant LOD terrain occludes the clouds).
+	cloudsBehindLodTerrain = true
+	#Under an Iris shaderpack, render Simple Clouds BEHIND Voxy's LOD terrain. Shaderpacks that shade
+	#the LOD themselves (Complementary, ...) keep it out of the depth buffer the clouds are tested
+	#against, so the cloud layer draws straight over distant LOD mountains. With this on, the LOD depth
+	#is added to that buffer right before the clouds are drawn - after the shaderpack has finished the
+	#frame, so the pack's own LOD shadows, ambient occlusion and fog are left alone. Turn off to let
+	#clouds draw over LOD instead. Requires Iris and Simple Clouds; does nothing without both.
+	cloudsBehindLodWithShaders = true
+	#Fog the clouds over the CLOUD render distance instead of the terrain's. Simple Clouds fogs its
+	#clouds with the ordinary shader fog, which is tuned for terrain - and terrain fog is set to close
+	#at Voxy's LOD data edge, far nearer than the distance clouds are drawn over. Every cloud past that
+	#point is then clamped to fully fogged and the sky flattens into a sheet of fog colour. With this
+	#on, the fog is stretched to the cloud distance just for the cloud pass (same curve, same colour,
+	#just spread over the range the clouds actually occupy) and restored straight after, so terrain and
+	#sky are untouched. Only ever pushes the fog outward - if clouds already sit inside the terrain fog
+	#nothing changes.
+	cloudFogFollowsCloudDistance = true
+	#How far out the cloud fog closes, as a percent of the cloud render distance. 100 = a cloud on the
+	#far horizon is fully fogged, exactly as terrain is at the terrain horizon. Lower brings the fog in
+	#so distant clouds fade sooner; higher keeps far clouds clearer.
+	# Default: 100
+	# Range: 10 ~ 200
+	cloudFogPercent = 100
+
+#Voxy x Better Clouds compatibility
+[voxy_betterclouds]
+	#Extend Better Clouds' clouds out to Voxy's LOD terrain.
+	#Better Clouds sizes its whole cloud volume from the VANILLA render distance, so its clouds stop at
+	#the vanilla horizon while Voxy's LOD carries on for thousands of blocks behind them - distant
+	#mountains standing under bare sky, with a hard rim where the cloudscape ends. Cloud fog follows
+	#automatically, because Better Clouds derives that from the same number.
+	matchRenderDistance = true
+	#When matching is on, render clouds out to this percent of Voxy's LOD EDGE (where LOD terrain
+	#actually runs out), not of its render distance - clouds past the last terrain are paid for and seen
+	#by nobody. 100 = clouds reach exactly as far as terrain does; 50 = clouds end halfway out.
+	#This can only push the distance OUT: if you have already tuned Better Clouds' own 'distance' slider
+	#past Voxy's LOD, your value is kept.
+	# Default: 100
+	# Range: 10 ~ 400
+	cloudRenderPercent = 100
+	#Hard cap on the matched cloud distance, in blocks (applied AFTER the percent above). 0 = no cap.
+	#Better Clouds fills a SQUARE grid of cloud chunks out to this radius, so cost grows with the square
+	#of the distance: Voxy's default 16 sections (8192 blocks) is about seven times the cloud volume of a
+	#3072-block LOD. The default keeps clouds far but not absurd. Raise it if you run a big LOD and have
+	#GPU headroom; lower it for frames.
+	# Default: 4096
+	# Range: 0 ~ 16384
+	cloudRenderDistanceMaxBlocks = 4096
+
+#Better Clouds multi-layer sky
+[betterclouds_layers]
+	#Draw extra cloud decks above and below the one Better Clouds already draws, so the sky has real
+	#depth instead of being a single sheet. Each extra deck is a full renderer of its own with its
+	#own cloud shape, height and drift speed. Off restores stock Better Clouds exactly.
+	enabled = true
+	#Which ready-made sky arrangement to use. These only describe the EXTRA decks - the main cloud
+	#layer stays exactly as you set it in Better Clouds' own options, so pick your base clouds there
+	#and pick what sits around them here.
+	#  LAYERED_DEPTH    - the same clouds you already have, higher up and more spread out. Safest
+	#                     and the most natural: the extra decks use the main layer's cloud size, so
+	#                     they cannot look out of place - only how loosely they sit differs.
+	#  HIGH_CIRRUS      - one deck of torn cirrus above the main one.
+	#  WISPS            - faint feathering high up. The subtlest, and the cheapest.
+	#  MACKEREL_SKY     - rippled altocumulus with fine wisps above it.
+	#  TOWERING_SUMMER  - scattered puffs just above, cirrus far overhead. A bright summer sky.
+	#  STORM_FRONT      - a ragged anvil lid with fog banks rolling underneath.
+	#  OVERCAST_LAYERS  - a flat grey ceiling close overhead with heavier masses above it.
+	#  ARCTIC           - a thin uniform pall under feathery streaks. Cold and flat.
+	#  ALIEN_SKY        - terraced stacks below vast drifting landmasses. Not a real sky.
+	#  DOUBLE_CUMULUS   - two levels of cumulus, small below and piled above.
+	#  TROPICAL         - tall build-ups at mid height under a high veil.
+	#  LOW_FOG          - one soft bank below the main deck. Good over water, and nearly free.
+	#  DEEP_STACK       - two more decks at full density and distance. The best look and by far the
+	#                     most expensive: roughly triple the cloud cost of stock.
+	#  CUSTOM           - use the hand-set values in the custom section below.
+	#Cloud shapes come from Better Clouds' noise presets; an arrangement that names one you don't have
+	#installed just falls back to your base deck's shape for that layer.
+	#Allowed Values: LAYERED_DEPTH, HIGH_CIRRUS, WISPS, MACKEREL_SKY, TOWERING_SUMMER, STORM_FRONT, OVERCAST_LAYERS, ARCTIC, ALIEN_SKY, DOUBLE_CUMULUS, TROPICAL, LOW_FOG, DEEP_STACK, CUSTOM
+	skyArrangement = "LAYERED_DEPTH"
+	#Total cloud layers, counting the one Better Clouds draws. 1 = no extra decks (stock), 2 = one
+	#extra, 3 = two extra. Arrangements that only define one extra deck stop at 2 whatever this says.
+	#Cost grows with the SQUARE of a deck's render distance, so a third full-fat deck is real money;
+	#the flat high veils the arrangements use for their top layer are close to free.
+	# Default: 2
+	# Range: 1 ~ 3
+	layerCount = 2
+	#How TALL the clouds on the EXTRA decks are, as a percent of the main layer's cloud height. The
+	#main layer is never touched.
+	#100 = the same clouds as your main layer, which is what makes an extra deck read as more of your
+	#own sky rather than a different mod's; lower flattens the deck into something lighter overhead.
+	#Height is the safe axis to thin a deck on: a deck's clouds hold together horizontally, so
+	#flattening one can never break it into scattered squares the way raising sparsity does.
+	# Default: 100
+	# Range: 10 ~ 150
+	extraLayerDensityPercent = 100
+	#Size of each individual cloud on the EXTRA decks, as a percent of the main layer's.
+	#100 = clouds the same size as the ones below them. Lower makes the sky out of more, smaller
+	#pieces.
+	#It stops shrinking once the clouds would come apart: Better Clouds builds a cloud out of
+	#overlapping cubes, so below about two and a half times the cell spacing there is no cloud left,
+	#only the cubes. If you want genuinely small clouds, lower the coarseness dial below as well so
+	#the grid comes in with them - that costs frames, which is why it is not done for you.
+	# Default: 100
+	# Range: 20 ~ 200
+	cloudSizePercent = 100
+	#How coarse the cloud grid is on the EXTRA decks, as a percent of the main layer's cell spacing.
+	#This is the performance dial, and by a wide margin the strongest one here: the number of cells
+	#in a deck is its distance divided by this, squared, so 200 is a quarter of the work and 400 is a
+	#sixteenth.
+	#It does not open up the sky, whatever it looks like it should do. Cloud shapes are sampled in
+	#world coordinates, so a coarser grid draws the SAME clouds in the same places out of fewer,
+	#bigger cubes - blockier and cheaper, not sparser. For sky between the clouds use the separation
+	#dial below.
+	# Default: 100
+	# Range: 50 ~ 400
+	cloudGapPercent = 100
+	#How far apart the clouds on the EXTRA decks sit, as a percent.
+	#100 = clouds exactly the size of your main layer's, packed the same way. Raising it trims the
+	#edge off every cloud, so each one gets a little smaller and the lanes of open sky between them
+	#get wider - the same silhouettes, more blue around them.
+	#This is the only dial here that actually shows more sky, and it is free: cloud width is a shader
+	#value, so it costs no extra cells, no worker time and no memory. It cannot punch holes through a
+	#cloud the way sparsity does, and it stops on its own at the point where the clouds would start
+	#coming apart into cubes, so the top of the range is safe even on a coarse grid.
+	#How much of the sky is cloud in the first place is set by the noise preset in Better Clouds' own
+	#options - a thinner preset there is the big lever, this is the fine one.
+	# Default: 100
+	# Range: 100 ~ 150
+	cloudSeparationPercent = 100
+
+	#Hand-set decks, used only when skyArrangement = CUSTOM
+	[betterclouds_layers.custom]
+		#Cloud shape for the second layer: the 'key' of one of Better Clouds' noise presets, e.g.
+		#cirrus_veil, stratus_deck, towering_cumulus, fog_bank, sky_islands. Empty = same shape as the
+		#main layer.
+		layer2NoisePreset = "cirrus_veil"
+		#How far above the main cloud layer this deck sits, in blocks. Negative puts it below.
+		# Default: 112
+		# Range: -256 ~ 512
+		layer2HeightOffset = 112
+		#Distance between cloud cells. This is the main cost dial: the number of cells is the render
+		#distance divided by this, squared. Wider is coarser and much cheaper - but cells are only as
+		#wide as the main layer's cloud size, so pushing this far past that leaves them not touching.
+		# Default: 6.0
+		# Range: 0.5 ~ 64.0
+		layer2Spacing = 6.0
+		#Fraction of cells left empty, 0-1. KEEP THIS LOW. It is tempting as a thinning dial, but a deck
+		#only reads as cloud while its cells still overlap; empty half of them and what is left is a
+		#scatter of isolated squares hanging in the sky - especially obvious on a flat deck (cloud height
+		#0). Thin a deck with wider spacing and a broader noise scale instead.
+		# Default: 0.0
+		# Range: 0.0 ~ 0.99
+		layer2Sparsity = 0.0
+		#Cloud height for this deck. 0 is special: Better Clouds then draws flat 4-vertex clouds instead
+		#of 36-vertex boxes, which is what makes a high veil almost free. Anything above 0 gives the deck
+		#real volume and real cost.
+		# Default: 12.0
+		# Range: 0.0 ~ 128.0
+		layer2CloudHeight = 12.0
+		#Cloud shape for the third layer. Empty = same shape as the main layer.
+		layer3NoisePreset = "stratus_deck"
+		#How far above the main cloud layer the third deck sits, in blocks. Negative puts it below.
+		# Default: 40
+		# Range: -256 ~ 512
+		layer3HeightOffset = 40
+		#Distance between cloud cells on the third deck.
+		# Default: 6.0
+		# Range: 0.5 ~ 64.0
+		layer3Spacing = 6.0
+		#Fraction of cells left empty on the third deck, 0-1. Keep it low, for the reason above.
+		# Default: 0.05
+		# Range: 0.0 ~ 0.99
+		layer3Sparsity = 0.05
+		#Cloud height for the third deck. 0 uses the cheap flat mesh.
+		# Default: 10.0
+		# Range: 0.0 ~ 128.0
+		layer3CloudHeight = 10.0
+
+#Voxy LOD transition smoothing
+[voxy_lod]
+	#Aligns Voxy's LOD-cull edge with where vanilla actually stops rendering, to remove the ring of
+	#missing chunks (void) at the render-distance edge. Voxy masks LOD by a chunk's NEAREST CORNER
+	#while Sodium renders by ~chunk CENTRE, a ~half-chunk (8-block) mismatch that leaves a void. This
+	#pulls Voxy's cull radius inward by this many blocks. ~8 is the sweet spot for most render
+	#distances: too low still shows the void; too high (~16+) makes LOD overlap INTO the vanilla edge
+	#and you see a border/seam (worst through water). Nudge by 2-4 if your render distance shows either.
+	#0 = off (Voxy default void).
+	# Default: 8
+	# Range: 0 ~ 256
+	lodEdgeOverlapBlocks = 0
+
+#Voxy LOD detail
+[voxy_lod_detail]
+	#Stop Voxy leaving distant terrain coarser than it needs to be. Voxy decides how much LOD
+	#detail it can afford from how full its geometry buffer is, and nudges a multiplier every
+	#frame: above 95% full it coarsens the LOD by 0.4% per frame (up to 4x coarser), below 90% it
+	#gives 0.05% per frame back, and between 90% and 95% it does NOTHING. So the multiplier rises
+	#eight times faster than it falls, and any buffer sitting in that 90-95% band keeps whatever
+	#coarsening it has picked up indefinitely. Voxy's own cleaner holds the buffer at about 87.5%
+	#full, right at the edge of the frozen band - so every brief spike above 95% ratchets the LOD
+	#down quickly and the recovery is slow, partial, or never comes. That is the 'some chunks are
+	#permanently blocky while everything else looks fine' symptom.
+	#With this on, WHEN Voxy starts coarsening is untouched (still 95% - if the buffer really is
+	#full, coarsening is the right answer). Only the recovery changes: the frozen band is closed,
+	#and detail is given back at exactly the rate it was taken. Voxy then settles on the finest LOD
+	#that actually fits instead of overshooting past it. The memory limit itself is enforced by
+	#Voxy's node cleaner, which this does not touch, so this cannot make Voxy use more VRAM.
+	#You can watch the number this controls on the F3 screen: 'LOD detail pressure: N.NNx coarser'.
+	stabiliseDetailPressure = true
+	#How far Voxy is allowed to coarsen the LOD when its geometry buffer fills, as a percent.
+	#This is the multiplier itself, not the visible coarseness: the LOD ends up the SQUARE ROOT of
+	#it coarser, so 1600 = 4x coarser (Voxy's own limit), 400 = 2x, 100 = never coarsen at all.
+	#Lowering it does not create memory - it just moves the work to Voxy's node cleaner, which then
+	#evicts and rebuilds more meshes to stay inside the same buffer. That trades frame-time and
+	#some LOD pop-in for detail. Try 400 if distant terrain is blockier than you can stand and you
+	#have frames to spare; leave it at 1600 to keep Voxy's own behaviour. If you find yourself
+	#wanting this low, the real fix is a bigger geometry buffer - see the two options below.
+	#Only does anything while the option above is on.
+	# Default: 1600
+	# Range: 100 ~ 1600
+	detailPressureCeilingPercent = 1600
+	#How much free VRAM Voxy holds back when it sizes its LOD geometry buffer, in MB. Voxy takes
+	#'free VRAM minus 1536 MB' (never below 512 MB) and logs 'Low free VRAM (Nmb): limiting Voxy
+	#geometry buffer to Mmb, LOD detail will be reduced' when that bites. 1536 is Voxy's own
+	#reserve, so leaving this alone changes nothing.
+	#That buffer is the entire LOD detail budget - it is what the fullness above is measured
+	#against - so on a card where a shaderpack and a big pack have already taken most of the VRAM,
+	#this reserve is the single number deciding how much distant detail you get. Lowering it hands
+	#the difference to the LOD.
+	#THIS ONE CAN BITE. Everything else here only changes how Voxy spends a budget it already has;
+	#this changes the budget. The buffer is sparse on NVIDIA so it is not all committed up front,
+	#but as the LOD fills it the memory is really taken, and a buffer bigger than the VRAM actually
+	#free will push the driver into system memory (stutter) or fail outright. Move it in 256 MB
+	#steps, watch 'UC/GC' on the F3 screen (used/capacity MB) or turn the diagnostic line on below,
+	#and stop while there is still real headroom. Raising it above 1536 is the safe direction.
+	# Default: 1536
+	# Range: 256 ~ 6144
+	geometryBufferHeadroomMB = 1536
+	#Never let the LOD geometry buffer be sized below this, in MB. 0 = off (Voxy decides alone).
+	#Voxy reads free VRAM ONCE, in its constructor, and rebuilds that constructor on every
+	#allChanged(): a resource reload, a dimension change, or a press of F3+A. Free VRAM moves
+	#around as a session goes on, so the same world can end up with a buffer three times smaller
+	#after a reload than it had at launch, purely from when the reading was taken - and the smaller
+	#it is, the harder Voxy clamps the LOD down. A floor stops the bad rolls.
+	#Set it from what you actually see: read the capacity off the F3 'UC/GC' line (or the
+	#diagnostic below) across a few reloads and pick a value your card sustains. Same warning as
+	#the headroom option above - this can hand Voxy memory that is not there. Applies after Voxy's
+	#own sizing, and Voxy's -Dvoxy.geometryBufferSizeOverrideMB JVM flag still wins over both.
+	# Default: 0
+	# Range: 0 ~ 8192
+	geometryBufferMinMB = 0
+	#Write Voxy's LOD detail pressure and geometry buffer use to the log every 30 seconds. Voxy
+	#shows both on the F3 screen already, but nothing reaches latest.log, so after a session where
+	#distant terrain looked bad there is no record of whether it was memory-limited and no number
+	#to tune the options above against. Off by default; it is one line per half minute.
+	logDetailDiagnostics = false
+
+#Voxy LOD lighting
+[voxy_lod_light]
+	#Fixes the random dark 2x2 (and 4x4, 8x8) patches on Voxy's LOD terrain, most visible on
+	#tree canopies and other non-solid blocks. When Voxy merges 2x2x2 blocks into one bigger LOD
+	#voxel it keeps the light of whichever single block it picked - sometimes an interior, unlit
+	#one - so a face that is brightly lit up close renders almost black in the LOD. With this on,
+	#the merged voxel keeps the BRIGHTEST light of the blocks it replaced instead (Voxy's own
+	#source carries a TODO asking for exactly this). Applies as chunks are scanned into the LOD -
+	#already-stored LOD data only updates when its chunks next load or change.
+	mipKeepsBrightestLight = true
+
+#Voxy LOD plants
+[voxy_lod_plants]
+	#Keep grass, flowers, crops and other thin foliage on Voxy's distant LOD terrain, so fields
+	#don't turn into bare ground past the render distance. When Voxy merges 2x2x2 blocks into one
+	#bigger LOD voxel it keeps whichever block blocks the most light, and a plant blocks none - so
+	#the ground it is standing on always wins and the plant is thrown away. With this on, a merged
+	#cell that is solid ground on the bottom and nothing but foliage on top keeps the foliage.
+	#Applies as chunks are scanned into the LOD - already-stored LOD data only updates when its
+	#chunks next load or change.
+	renderPlantsInLod = true
+	#How far out plants are kept, as Voxy's LOD level. Each level doubles the voxel size, and a kept
+	#plant fills its whole voxel: 1 = 2-block voxels (the nearest LOD band, roughly tall-grass
+	#scale), 2 = 4-block, 3 = 8-block, 4 = 16-block. Higher reaches further but the vegetation layer
+	#gets thicker and the solid ground under it sits one voxel lower, so at 3-4 distant fields read
+	#as a see-through green slab over sunken terrain. 1 is the safe setting; raise it a level at a
+	#time if the far field still looks bare.
+	# Default: 1
+	# Range: 1 ~ 4
+	maxLodLevel = 1
+	#How densely planted a merged cell must be before its plants are kept, out of the 4 blocks in the
+	#top half of the cell. 1 = a single blade greens the whole cell (most plants visible, but an
+	#isolated flower leaves a small dip in the ground where its cell sits one voxel lower); 2-3 is a
+	#middle ground; 4 = only fully planted cells, so meadows and crop fields show and scattered
+	#decoration is left alone. Raise this if distant terrain looks pockmarked.
+	# Default: 2
+	# Range: 1 ~ 4
+	minPlantsPerCell = 2
+
+#Voxy x LittleTiles LOD
+[voxy_littletiles]
+	#Render LittleTiles blocks in Voxy's distant LOD terrain. Voxy bakes each LittleTiles block into
+	#the LOD as ONE FULL voxel of its biggest tile's material. Turn off to leave LittleTiles out of
+	#the LOD entirely (they still render normally inside the vanilla render distance). Applies as
+	#chunks are scanned into the LOD - already-baked LOD data only updates when its chunks are next
+	#loaded/changed.
+	renderInLod = true
+	#Only bake a LittleTiles block into the LOD if its tiles fill at least this percent of the block's
+	#volume. Because any included block becomes a FULL voxel at distance, sparse decorations (cables,
+	#trims, thin poles) otherwise bloat into solid blocks in the LOD. 0 = bake every LittleTiles block
+	#(Voxy's default behaviour); ~10-25 keeps substantial builds while dropping thin decor; 100 = only
+	#completely filled blocks.
+	# Default: 0
+	# Range: 0 ~ 100
+	minFillPercent = 0
+
+#Voxy x Big Water compatibility
+[voxy_bigwater]
+	#Bake Voxy's LOD fluids at Big Water's texture scale, so water doesn't change texture where the
+	#LOD takes over. Big Water spreads one fluid texture across an NxN block area, but it only does
+	#that inside Sodium's chunk mesher. Voxy bakes its LOD models through vanilla's fluid renderer
+	#instead, which Big Water never touches - so the LOD keeps vanilla's one-texture-per-block mapping
+	#and distant water carries N times finer detail than the water in front of it, right at the seam
+	#where it shows most. With this on, the bake uses Big Water's sprite and scale as well.
+	#A LOD model is baked per BLOCK STATE, so it gets one fixed slice of the texture (the one Big Water
+	#draws at world 0,0) rather than the NxN variation the near chunks have - the scale matches, the
+	#per-block variation can't. LOD is drawn from mips of those bakes, so past the handoff what shows
+	#is the texture's density and average colour, and both then agree.
+	#Applies as block states are first baked - already-baked LOD models keep the old scale until Voxy's
+	#model cache is rebuilt. Does nothing while Big Water is idle (no pack active and its scale at 1).
+	matchFluidTextureScale = true
+
+#Voxy x Atmospherics compatibility
+[voxy_atmospherics]
+	#Move Atmospherics' fog end out to Voxy's LOD horizon instead of letting it close inside the
+	#vanilla render distance. Atmospherics fogs to full opacity at a fixed block distance (150 by
+	#default), but Voxy's LOD terrain renders with no fog at all - so distant LOD stays crisp and fully
+	#lit right behind a wall of fog. Pushing the end out leaves the fog near zero where the unfogged
+	#LOD takes over, which is what that handoff needs to blend. Atmospherics' own fog START is left
+	#alone, so fog still builds from near the camera. Off = use Atmospherics' distances unchanged.
+	matchFogDistance = true
+	#Where the fog closes, as a percent of the LOD EDGE - where terrain actually runs out (the distant-
+	#gen radius, ~1536 blocks by default), NOT the render distance. 100 = fog solid exactly at the
+	#edge: the normal chunks, the seam and the LOD all sit on one continuous curve that hides the world
+	#edge with no kink at the handoff. Lower closes the fog before the edge - denser fog on the normal
+	#chunks and a smoother seam, trading away some visible LOD. The fog is linear, so this really sets
+	#how much haze the near view carries: 100 is the lightest that still covers the edge, 60-70 gives
+	#obvious near fog. Never pulls the fog closer than Atmospherics asked for.
+	# Default: 75
+	# Range: 10 ~ 200
+	fogDistancePercent = 75
+	#Use Atmospherics' SKY colour for the fog as well, instead of its separate fog colour. Terrain
+	#that has fully faded out is exactly the fog colour, so it only really disappears if the sky
+	#behind it is that colour too - vanilla derives its fog colour from the sky and Better Fog
+	#repaints the sky to match its fog, which is why neither ever shows a hard rim where terrain runs
+	#out. Atmospherics sets fog colour and sky colour independently, so when they differ the far edge
+	#of Voxy's LOD reads as a disc of fog colour cut out of a different sky, and adding more fog only
+	#makes that disc more solid.
+	#This recolours the fog everywhere - near ring and LOD alike - so they cannot disagree. Doing it
+	#for the distant terrain only would swap the rim at the horizon for a colour break at the
+	#render-distance handoff, which is worse and more obvious. Where a biome already has both colours
+	#set the same (Atmospherics' defaults do) this changes nothing.
+	fogColourFromSky = false
+
+#Better Fog x Atmospherics compatibility
+[betterfog_atmospherics]
+	#Let Atmospherics own the fog COLOUR and stop Better Fog from writing it. Both mods set the fog
+	#colour - Better Fog from the ComputeFogColor event and again during its render-stage tick,
+	#Atmospherics from its own per-biome settings - so whichever lands last wins and you get a colour
+	#neither mod configured. With this on, Atmospherics' per-biome colours apply cleanly and Better Fog
+	#still controls the fog's distance, density and shape. Off = both mods write the colour (Better
+	#Fog's own behaviour). Only does anything when BOTH mods are installed.
+	atmosphericsOwnsFogColour = true
+	#Let Better Fog own the fog's DISTANCE and stop Atmospherics from setting it. Pairs with the
+	#option above to split the job down the middle: Better Fog drives everything distance-shaped -
+	#where the fog starts and closes, its density curve and shape, its cave/void/water/lava handling -
+	#and Atmospherics drives the colour. Each mod does the half it is better at instead of the two
+	#overwriting each other's uniforms.
+	#Without this, Atmospherics wins the distance purely by ordering: Better Fog sets its distances
+	#from the RenderFog event fired inside FogRenderer.setupFog, and Atmospherics writes its own from
+	#an injection at that same method's tail, which runs afterwards. Off = Atmospherics sets the fog
+	#distance as well (and wins). Only does anything when BOTH mods are installed.
+	betterFogOwnsFogDistance = true
+
+#Voxy LOD fog
+[voxy_lod_fog]
+	#Render fog on Voxy's LOD terrain. Voxy's LOD is drawn unfogged - its blit shader has a fog step,
+	#but Voxy hands it an all-zero fog colour, so the step never runs. That is why fog from ANY mod
+	#(vanilla, Atmospherics, Better Fog) stops at the vanilla render distance and the LOD behind it
+	#stays crisp and fully lit. With this on, the LOD is fogged by whatever fog the game is currently
+	#using, so distant terrain recedes into it properly. Requires Voxy's own 'use environmental fog'
+	#option to be on (it is by default) - the uniforms this fills in only exist when it is.
+	renderFogOnLod = true
+	#How strongly the fog tints LOD terrain, as a percent. 100 = the same fog the vanilla terrain in
+	#front of it gets, so the two match seamlessly; lower keeps distant LOD clearer than the fog says
+	#it should be, which trades a little realism for seeing further. Pair with the fog-distance
+	#options above: those decide WHERE the fog closes, this decides how opaque it gets on the LOD.
+	# Default: 100
+	# Range: 0 ~ 100
+	fogStrength = 100
+	#Give the LOD its OWN fog curve that closes at the world edge, instead of reusing the same curve as
+	#the normal chunks. OFF by default, and usually best left off. The idea was to let the near view
+	#stay clear while still fogging the far LOD edge, but because that second curve is pinned to the
+	#render-distance handoff it has a high floor: LOD that appears close to the player - which happens
+	#whenever the normal chunks around you haven't finished loading - comes out far too foggy. With
+	#this off, the LOD uses exactly the same fog as the normal chunks, so a near LOD chunk looks like
+	#near terrain whether or not its normal chunk has loaded, and the fog-distance percent alone
+	#decides where everything closes. Leave off unless you specifically want the separate far-edge
+	#fade and always keep your normal chunks loaded.
+	fadeAtWorldEdge = false
+
+#Voxy on Xaero's map
+[voxy_xaero]
+	#Draw the terrain Voxy has in its LOD store onto Xaero's world map. Xaero can only map chunks the
+	#client actually has loaded - its writer is capped at the render distance and skips any chunk the
+	#game hasn't given it - so everything Voxy renders past the vanilla horizon is blank paper on the
+	#map even though you can see it on screen. This walks Voxy's store and writes those columns into
+	#Xaero's own map tiles, so they save to its region files, show up on the minimap, and survive a
+	#restart. Real chunks always win: a tile is only written where Xaero has none, and Xaero's writer
+	#overwrites it with the real thing once you actually go there.
+	fillMapFromLod = true
+	#How far the fill reaches, in Xaero map regions (512 blocks each), measured from the player. The
+	#real reach is the smaller of this and Voxy's render distance, so lowering Voxy's lowers this too.
+	#8 regions is about 4000 blocks in every direction. Raising it mostly costs disk: each filled
+	#region is a map file Xaero then keeps up to date.
+	# Default: 8
+	# Range: 1 ~ 32
+	maxRadiusRegions = 8
+	#How fast the map fills, in tile chunks (64x64 blocks) per second. Each one is 4096 map pixels
+	#built on the render thread, so this is the frame-time dial: 60 is one per frame at 60 fps and
+	#fills a whole 512-block region in about a second. Lower it if you can feel the fill; raise it if
+	#you would rather it caught up quickly and don't mind the cost while it does.
+	# Default: 60
+	# Range: 4 ~ 240
+	fillRate = 60

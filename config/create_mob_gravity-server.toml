@@ -1,0 +1,26 @@
+#Apply gravity loads from living entities tracked inside Sable sub-levels
+enabled = true
+#Include players in ship load calculations
+affectPlayers = true
+#Include non-player living entities in ship load calculations
+affectMobs = true
+#Global multiplier applied to every configured or estimated entity mass
+# Default: 1.0
+# Range: 0.0 ~ 100.0
+massMultiplier = 1.0
+#Masses for normal/adult entities, formatted as namespace:entity=mass. Modded entity IDs are supported. Set to 0 to disable load; the last duplicate entry takes precedence
+entityMasses = ["minecraft:player=1.0", "minecraft:villager=1.0", "minecraft:chicken=0.2", "minecraft:cow=1.0", "minecraft:iron_golem=5.0", "minecraft:pig=0.6", "minecraft:sheep=0.7", "minecraft:zombie=1.0", "minecraft:pillager=1.0", "minecraft:skeleton=0.4", "minecraft:creeper=1.0", "minecraft:wolf=0.3", "minecraft:cat=0.3", "minecraft:slime=4.0", "minecraft:magma_cube=4.0", "minecraft:armadillo=0.4", "minecraft:axolotl=0.25", "minecraft:camel=3.0", "minecraft:cod=0.2", "minecraft:dolphin=1.5", "minecraft:donkey=2.5", "minecraft:drowned=1.0", "minecraft:elder_guardian=4.0", "minecraft:enderman=1.5", "minecraft:endermite=0.1", "minecraft:evoker=1.0", "minecraft:fox=0.3", "minecraft:frog=0.25", "minecraft:glow_squid=0.2", "minecraft:goat=0.7", "minecraft:guardian=1.2", "minecraft:hoglin=1.5", "minecraft:horse=2.5", "minecraft:husk=1.0", "minecraft:illusioner=1.0", "minecraft:llama=2.5", "minecraft:mooshroom=1.0", "minecraft:mule=2.5", "minecraft:ocelot=0.25", "minecraft:panda=1.5", "minecraft:piglin=1.0", "minecraft:piglin_brute=1.5", "minecraft:polar_bear=2.0", "minecraft:pufferfish=0.15", "minecraft:rabbit=0.1", "minecraft:ravager=4.0", "minecraft:salmon=0.2", "minecraft:shulker=1.5", "minecraft:silverfish=0.1", "minecraft:skeleton_horse=2.5", "minecraft:sniffer=2.0", "minecraft:snow_golem=0.4", "minecraft:spider=0.6", "minecraft:squid=0.2", "minecraft:stray=0.4", "minecraft:strider=0.8", "minecraft:tadpole=0.05", "minecraft:trader_llama=1.2", "minecraft:tropical_fish=0.1", "minecraft:turtle=0.8", "minecraft:vindicator=1.0", "minecraft:wandering_trader=1.0", "minecraft:witch=1.0", "minecraft:wither_skeleton=1.2", "minecraft:zoglin=1.5", "minecraft:zombie_horse=2.5", "minecraft:zombie_villager=1.0", "minecraft:zombified_piglin=1.0", "minecraft:warden=4.0", "minecraft:breeze=0.6", "minecraft:creaking=1.2", "minecraft:allay=0.0", "minecraft:armor_stand=0.0", "minecraft:bat=0.0", "minecraft:bee=0.0", "minecraft:blaze=0.0", "minecraft:bogged=0.0", "minecraft:cave_spider=0.0", "minecraft:ender_dragon=0.0", "minecraft:ghast=0.0", "minecraft:giant=0.0", "minecraft:parrot=0.0", "minecraft:phantom=0.0", "minecraft:vex=0.0", "minecraft:wither=0.0"]
+#Explicit masses for baby entities, formatted as namespace:entity=mass. Overrides entityMasses; babies without an entry use the normal entity mass
+babyEntityMasses = ["minecraft:armadillo=0.2", "minecraft:axolotl=0.125", "minecraft:camel=1.5", "minecraft:cat=0.15", "minecraft:chicken=0.1", "minecraft:cow=0.5", "minecraft:dolphin=0.75", "minecraft:donkey=1.25", "minecraft:fox=0.15", "minecraft:goat=0.35", "minecraft:hoglin=0.75", "minecraft:horse=1.25", "minecraft:llama=1.25", "minecraft:mooshroom=0.5", "minecraft:mule=1.25", "minecraft:ocelot=0.125", "minecraft:panda=0.75", "minecraft:pig=0.3", "minecraft:piglin=0.5", "minecraft:polar_bear=1.0", "minecraft:rabbit=0.05", "minecraft:sniffer=1.0", "minecraft:strider=0.4", "minecraft:trader_llama=0.6", "minecraft:turtle=0.4", "minecraft:villager=0.5", "minecraft:wandering_trader=0.5", "minecraft:wolf=0.15", "minecraft:zoglin=0.75", "minecraft:zombie=0.5", "minecraft:zombie_villager=0.5", "minecraft:zombified_piglin=0.5"]
+#Masses for small slime-type entities, formatted as namespace:entity=mass
+smallSlimeMasses = ["minecraft:slime=0.25", "minecraft:magma_cube=0.25"]
+#Masses for medium slime-type entities, formatted as namespace:entity=mass
+mediumSlimeMasses = ["minecraft:slime=1.0", "minecraft:magma_cube=1.0"]
+#Masses for large slime-type entities, formatted as namespace:entity=mass
+largeSlimeMasses = ["minecraft:slime=4.0", "minecraft:magma_cube=4.0"]
+#Estimate masses from collision-box dimensions when no config or datapack value exists
+estimateUnconfiguredMobMass = true
+#Ticks between entity and position scans; lower values update loads more frequently
+# Default: 1
+# Range: 1 ~ 20
+scanIntervalTicks = 1

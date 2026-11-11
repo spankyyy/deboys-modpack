@@ -1,0 +1,4 @@
+#Number of ticks between breaking a block and starting to break the next one
+# Default: 0
+# Range: 0 ~ 20
+miningTickDelay = 1

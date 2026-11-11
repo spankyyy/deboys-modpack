@@ -1,0 +1,15 @@
+{
+	"//": "These settings are easier to change in-game! Mod List -> Shulker Drops Two -> Config",
+	"Enable Shulker Drops Two": {
+		"//": "Whether Shulker Drops Two is enabled. When disabled, none of its features run and its other settings are hidden. Takes effect after a restart.",
+		"value": true
+	},
+	"alwaysDropShells": {
+		"//": "Ignore the drop chance (default 50%) that a Shulker will drop their shell and instead makes them always drop it.",
+		"value": false
+	},
+	"shulkerDropAmount": {
+		"//": "Sets the amount of shells Shulkers drop. min: 1, max: 64",
+		"value": 2
+	}
+}

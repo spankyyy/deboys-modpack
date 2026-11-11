@@ -1,0 +1,18 @@
+filename = 'responsiveshields-2.4-neoforge-mc1.21.x.jar'
+name = 'Responsive Shields'
+side = 'server'
+x-prismlauncher-dependencies = []
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21', '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '2.4'
+
+[download]
+hash = 'a0a16cb52ba862919c9a797cd6bf4d45fea029efe7d4354c99a8a334b101a26bbefdacfd935cf0e6939d4c9cf3fcdb0c166b8f468709d5e94c1666fb799348bc'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/MBmh0f9A/versions/mNqXF51P/responsiveshields-2.4-neoforge-mc1.21.x.jar'
+
+[update.modrinth]
+mod-id = 'MBmh0f9A'
+version = 'mNqXF51P'

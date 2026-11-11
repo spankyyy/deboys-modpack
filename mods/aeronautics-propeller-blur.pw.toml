@@ -1,0 +1,21 @@
+filename = 'AeroPropBlur-1.21.1-1.0a.jar'
+name = 'Aeronautics Propeller Blur'
+side = 'client'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '1.0a'
+
+[download]
+hash = 'f2ede22f36f535792723f035693c039dd64e7b254cc19ae53310e4446cdc24b618ae63590b688810306a1f3d4ef9166908ac8871b388250ee4f464bac186fd4a'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/uKFK3MBp/versions/27nROiTP/AeroPropBlur-1.21.1-1.0a.jar'
+
+[update.modrinth]
+mod-id = 'uKFK3MBp'
+version = '27nROiTP'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'oWaK0Q19'
+type = 'REQUIRED'

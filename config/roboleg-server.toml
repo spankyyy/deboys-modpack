@@ -1,0 +1,110 @@
+#Create stress units per RPM per advanced leg; basic legs use 3/4 (24 SU/RPM by default). Restart the world after changing.
+# Default: 32.0
+# Range: 1.0 ~ 1024.0
+stressImpact = 32.0
+#Maximum vertical support force per planted leg, N.
+# Default: 120000.0
+# Range: 100.0 ~ 1.0E7
+maxSupportForce = 120000.0
+#Vertical stiffness per effective contact mass, s^-2.
+# Default: 100.0
+# Range: 1.0 ~ 400.0
+springStiffness = 100.0
+#Vertical damping, s^-1. Angular damping is bounded by contact count and physics timestep.
+# Default: 20.0
+# Range: 0.0 ~ 100.0
+springDamping = 20.0
+#Maximum horizontal traction as a fraction of vertical support.
+# Default: 1.25
+# Range: 0.0 ~ 2.0
+traction = 1.25
+#Horizontal drive acceleration before the terrain traction limit, blocks/s^2.
+# Default: 12.0
+# Range: 1.0 ~ 30.0
+driveAcceleration = 12.0
+# Default: 10.0
+# Range: 1.0 ~ 30.0
+driveResponse = 10.0
+#Client foot interpolation duration in ticks; 0 disables smoothing.
+# Default: 3.0
+# Range: 0.0 ~ 8.0
+footSmoothingTicks = 3.0
+#Search ceiling above the current chassis/last support baseline, blocks; walls/tree trunks are rejected.
+# Default: 3.0
+# Range: 0.25 ~ 3.0
+maxStepHeight = 3.0
+#One-time 0.2.8 migration to the requested 3-block search height; leave true after upgrade.
+searchHeightUpgrade028 = true
+# Default: 0.6
+# Range: 0.25 ~ 2.0
+jumpChargeTime = 0.6
+#Upward launch speed; 9.5 is 2.5 times the old jump impulse per mass.
+# Default: 9.5
+# Range: 4.0 ~ 14.0
+jumpSpeed = 9.5
+# Default: 0.65
+# Range: 0.15 ~ 0.75
+jumpCrouchDepth = 0.65
+#Synchronizer travel speed multiplier; 8 = 4.8 blocks/s requested at 64 RPM.
+# Default: 8.0
+# Range: 0.25 ~ 12.0
+walkSpeedMultiplier = 8.0
+# Default: 10.8
+# Range: 0.5 ~ 12.0
+maxWalkSpeed = 10.8
+#A/D turning speed multiplier relative to the original controller.
+# Default: 1.6
+# Range: 0.25 ~ 3.0
+turnSpeedMultiplier = 1.6
+#Adapt stride, clearance and springy running to actual chassis speed.
+dynamicGait = true
+#Fast gait suspension oscillation amplitude in blocks; 0 disables body bounce.
+# Default: 0.1
+# Range: 0.0 ~ 0.2
+runBounceHeight = 0.1
+#Base planted-foot travel at 4.8 blocks/s. Dynamic gait scales it within each leg's reach.
+# Default: 2.4
+# Range: 0.4 ~ 3.6
+stepLength = 2.4
+#Base foot lift during swing at 4.8 blocks/s; dynamic gait scales it with speed.
+# Default: 0.45
+# Range: 0.1 ~ 1.2
+stepHeight = 0.45
+#Fraction of the walking cycle spent lifting/carrying/planting each foot. Higher = deliberate high steps.
+# Default: 0.35
+# Range: 0.15 ~ 0.4
+swingFraction = 0.35
+#Additional roll torque while walking, following the planted-foot terrain plane. Never forces a walking pose.
+gyroWalkingAssist = true
+#Built-in virtual gyro: levels roll/pitch and holds heading while at least two powered feet touch terrain.
+gyroEnabled = true
+# Default: 14.0
+# Range: 0.0 ~ 100.0
+gyroStrength = 14.0
+# Default: 7.0
+# Range: 0.0 ~ 40.0
+gyroDamping = 7.0
+#Slow integral attitude trim: removes steady roll/pitch from uneven suspension loading.
+# Default: 20.0
+# Range: 0.0 ~ 100.0
+gyroIntegral = 20.0
+#Extra levelling authority while parked; gyroMaxTorque still applies.
+# Default: 4.0
+# Range: 1.0 ~ 8.0
+gyroParkingBoost = 4.0
+#Gentle artificial roll/pitch levelling on the ground while parked; never active in the air.
+gyroLevelAssist = true
+# Default: 8.0
+# Range: 0.0 ~ 100.0
+gyroYawStrength = 8.0
+# Default: 8.0
+# Range: 0.0 ~ 40.0
+gyroYawDamping = 8.0
+#Limit of gyro angular acceleration, radians/s^2.
+# Default: 6.0
+# Range: 0.1 ~ 40.0
+gyroMaxAngularAcceleration = 6.0
+#Absolute torque ceiling for one chassis gyro; more legs do not multiply its strength.
+# Default: 5000.0
+# Range: 1.0 ~ 1000000.0
+gyroMaxTorque = 5000.0

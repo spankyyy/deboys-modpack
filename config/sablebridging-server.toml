@@ -1,0 +1,13 @@
+[gameplay]
+	#How far (in blocks) the reach-around search looks for a gap-fill placement. Matches vanilla survival reach by default.
+	# Default: 4.5
+	# Range: 1.0 ~ 32.0
+	reachDistance = 4.5
+	#How closely you need to be looking toward an axis for it to count as a candidate support face. Lower = more forgiving/ambiguous placements; higher = stricter, more precise aim required.
+	# Default: 0.1
+	# Range: 0.0 ~ 1.0
+	directionSimilarityThreshold = 0.1
+	#Margin used when checking for diagonal-adjacency misses in the gap-fill search. Matches Bridging Mod's own 'snap strength' dial. Higher = catches more diagonal edge cases; lower = stricter/more literal.
+	# Default: 1.0
+	# Range: 0.0 ~ 2.0
+	snapStrength = 1.0

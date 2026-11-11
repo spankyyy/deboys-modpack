@@ -1,0 +1,5 @@
+.git/
+packwiz.exe
+packwiz-installer-bootstrap.jar
+__pycache__/
+*.pyc

@@ -1,0 +1,18 @@
+filename = 'custom-glow-enchantment-outline-neoforge-1.21.1-1.2.4.jar'
+name = 'Custom Glow Enchantment Outline'
+side = 'client'
+x-prismlauncher-dependencies = []
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '1.2.4'
+
+[download]
+hash = 'b05ba41370b9e094c3aec8d42bb3ff810de59596de89ee47c27fdf25c06dafd0561eee0b179dffc2b8fcc12586bdcb976e2be083211bd9fdfbb8170f1be98aec'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/Q2rI8IqW/versions/d0xjkIro/custom-glow-enchantment-outline-neoforge-1.21.1-1.2.4.jar'
+
+[update.modrinth]
+mod-id = 'Q2rI8IqW'
+version = 'd0xjkIro'

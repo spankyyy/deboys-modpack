@@ -1,0 +1,61 @@
+#Spawn particles with the animations.
+particles = true
+#Play the sounds that accompany the animations.
+sounds = true
+#How the config screen lays the styles out: TILES or LIST.
+#Allowed Values: TILES, LIST
+style_view = "TILES"
+
+#Assembly: a structure in the world becomes a physics object (physics on).
+[assembly]
+	#Play an animation.
+	enabled = true
+	#Id of the style the animation plays in.
+	#create_assembly_animation:diagram - the structure is sketched and redrawn like a page of the Contraption Diagram, with its forces.
+	#create_assembly_animation:scanner - a laser sheet sweeps up or down the structure.
+	#Styles added by other mods and packs have ids of their own. An id nothing provides is kept, and Diagram plays instead.
+	style = "create_assembly_animation:diagram"
+
+#Disassembly: a ship lines up and turns back into blocks (physics off).
+#The style also plays while the ship lines up.
+[disassembly]
+	#Play an animation.
+	enabled = true
+	#Id of the style the animation plays in.
+	#create_assembly_animation:diagram - the structure is sketched and redrawn like a page of the Contraption Diagram, with its forces.
+	#create_assembly_animation:scanner - a laser sheet sweeps up or down the structure.
+	#Styles added by other mods and packs have ids of their own. An id nothing provides is kept, and Diagram plays instead.
+	style = "create_assembly_animation:diagram"
+
+#Settings of the DIAGRAM style.
+[diagram]
+	#How strongly the structure glows. 0 hides the glow but keeps particles and sounds.
+	# Default: 1.0
+	# Range: 0.0 ~ 2.0
+	brightness = 2.0
+	#Playback speed of the animations.
+	# Default: 1.0
+	# Range: 0.25 ~ 4.0
+	speed = 2.0
+	#Draw the force arrows for propulsion, lift, balloon lift and levitation.
+	force_arrows = true
+	#Draw the dimension lines and the mass of the structure.
+	measurements = true
+	#Turn the rotation gizmo of the diagram beneath the ship while it lines up for disassembly.
+	rotation_gizmo = true
+
+#Settings of the SCANNER style.
+[scanner]
+	#How strongly the structure glows. 0 hides the glow but keeps particles and sounds.
+	# Default: 1.0
+	# Range: 0.0 ~ 2.0
+	brightness = 2.0
+	#Playback speed of the animations.
+	# Default: 1.0
+	# Range: 0.25 ~ 4.0
+	speed = 0.25
+	#Colour of the laser sheet.
+	#Allowed Values: CYAN, GREEN, GOLD, MAGENTA, RED, WHITE
+	laser_color = "CYAN"
+	#Draw the halo sticking out of the hull where the sheet cuts it.
+	halo = true

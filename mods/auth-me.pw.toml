@@ -1,0 +1,21 @@
+filename = 'authme-neoforge-9.0.1+1.21.1.jar'
+name = 'Auth Me'
+side = 'client'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'v9.0.1+1.21.1'
+
+[download]
+hash = '6f8a343e7bd75d0f9e222c9ced405a2b3b729656983e6ffe111bf97217fd95ddd83817580a126258a414c39e725266b51f03df40e2bd1072b24b7eee524cd8ad'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/yjgIrBjZ/versions/NinhKHNO/authme-neoforge-9.0.1%2B1.21.1.jar'
+
+[update.modrinth]
+mod-id = 'yjgIrBjZ'
+version = 'NinhKHNO'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'M1953qlQ'
+type = 'EMBEDDED'

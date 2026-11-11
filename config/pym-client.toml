@@ -1,0 +1,6 @@
+[rendering]
+	#Skip shadows on a sublevel once the viewer is this many times its scale.
+	#16 means a 1x player stops drawing them on crafts at 1/16 and smaller.
+	# Default: 16.0
+	# Range: 2.0 ~ 1024.0
+	detailCutoffRatio = 16.0

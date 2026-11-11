@@ -1,0 +1,7 @@
+[rendering]
+	#Minimum distance (in blocks) from your eye before the outline box is drawn. Prevents the box rendering uncomfortably close to the camera in tight tunnels.
+	# Default: 1.5
+	# Range: 0.0 ~ 8.0
+	minRenderDistance = 1.5
+	#Whether to draw the world-space outline box showing where a gap-fill placement will land. Purely visual -- the crosshair indicator and gap-fill placement itself are unaffected either way. Set to false if you'd rather bridge without the preview.
+	showOutline = true
