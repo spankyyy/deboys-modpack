@@ -5,6 +5,7 @@ tools/**
 README.md
 UNRESOLVED.json
 .gitignore
+.gitattributes
 .packwizignore
 packwiz.exe
 packwiz-installer-bootstrap.jar

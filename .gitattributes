@@ -1,0 +1,2 @@
+# Packwiz hashes exact file bytes. Never transform line endings on commit/checkout.
+* -text
