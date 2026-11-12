@@ -1029,10 +1029,6 @@ file = "config/catalogue.properties"
 hash = "9355d649d8f41a9b3151cc721aae1def21ce6683dac181166ea230288f463d57"
 
 [[files]]
-file = "config/catalogue_favourites.txt"
-hash = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-
-[[files]]
 file = "config/chalk-client.toml"
 hash = "84ad7a97ce3eb6394291614a1971ee8f6e0d4ef4c5d7622d64a55c42c972856c"
 
