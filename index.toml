@@ -30,7 +30,7 @@ hash = "df32843b853e0a493ef3a9b1e39276818294353fbb0d833f7f61e77da0f5bca1"
 
 [[files]]
 file = "config/accessories.json5"
-hash = "ff022e02369fe7d87db4eda00e38ea723e9867b200cb2f56bc25cec5db1d58c7"
+hash = "c61d213035001231871fc1e263c61fcad39fe09fabe5338e248aa1f1178dab81"
 
 [[files]]
 file = "config/accessories_compat.json5"
