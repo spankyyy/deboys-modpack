@@ -3855,7 +3855,7 @@ metafile = true
 
 [[files]]
 file = "mods/create.pw.toml"
-hash = "d76670ff137ae945ad98346ef797ebf1c38426eef4cfae028d3b6f22e7ac0c95"
+hash = "4b0ca63279620ec9ba4c63820a9d4f9ceea9b717227137ea19e5c420c820f858"
 metafile = true
 
 [[files]]
@@ -3901,6 +3901,11 @@ metafile = true
 [[files]]
 file = "mods/cut-through.pw.toml"
 hash = "a1668353a80708d52d7545c84b99b6e4ae562133e5a678a7d6b475b459c8ca31"
+metafile = true
+
+[[files]]
+file = "mods/cyberpunk2077-mod.pw.toml"
+hash = "d2f1bc656640992f3684c0c2feb8812fd27caa90765dbab616baecf747c6ca16"
 metafile = true
 
 [[files]]

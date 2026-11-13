@@ -1,0 +1,13 @@
+name = "Create: Chromeware"
+filename = "chromeware-1.2.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "faa8815f8026f3c294f8bb34cf766c65c03bdedf"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 9503063
+project-id = 1755743
