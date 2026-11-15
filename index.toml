@@ -4009,6 +4009,11 @@ hash = "2219a7192a8209bfa8a989a0c6002eb3f1fcc4db5bc9c98b88cd0147e5492620"
 metafile = true
 
 [[files]]
+file = "mods/frametothetrash.pw.toml"
+hash = "b86ccc48902c1136799e5b0a37e86518f8438f78a9001722b48c3b7cc93cd3ca"
+metafile = true
+
+[[files]]
 file = "mods/fusion-connected-textures.pw.toml"
 hash = "07f1782e4ef2083af7d871c5486c5753d4be33d6b89ed3a8e9870411f18aad75"
 metafile = true

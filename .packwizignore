@@ -17,3 +17,6 @@ config/watermedia/custom_vlc_path.txt
 config/xaeropatreon.txt
 config/almostunified/debug.json
 **/.gitignore
+
+# Served through a client-only manifest, not installed as a regular file.
+mods/frametothetrash-neoforge-1.21.1-1.0.2-neoforge.1.jar
