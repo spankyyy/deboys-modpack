@@ -4010,7 +4010,7 @@ metafile = true
 
 [[files]]
 file = "mods/frametothetrash.pw.toml"
-hash = "12b7f0920841cd2214313a2c3257726f1dc0cd2fddbb2bf5bff00ec78e28d0a6"
+hash = "b86ccc48902c1136799e5b0a37e86518f8438f78a9001722b48c3b7cc93cd3ca"
 metafile = true
 
 [[files]]
@@ -4513,11 +4513,6 @@ metafile = true
 [[files]]
 file = "mods/slice-and-dice.pw.toml"
 hash = "5f6093032237f78742e718d9fe97d80e962738a2969036deaec0229c7d037e3e"
-metafile = true
-
-[[files]]
-file = "mods/slipstream.pw.toml"
-hash = "88c48754838c0fc1f4bbec3781fe167153462b29fe7d9836fab834b1b4b5a723"
 metafile = true
 
 [[files]]
