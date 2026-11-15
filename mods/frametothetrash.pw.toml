@@ -2,11 +2,6 @@ name = "Frame to the Trash (NeoForge)"
 filename = "frametothetrash-neoforge-1.21.1-1.0.2-neoforge.1.jar"
 side = "client"
 
-[option]
-optional = true
-default = true
-description = "Limits buffer presentation without limiting rendering. Disable to use normal frame presentation."
-
 [download]
 url = "https://raw.githubusercontent.com/spankyyy/deboys-modpack/main/mods/frametothetrash-neoforge-1.21.1-1.0.2-neoforge.1.jar"
 hash-format = "sha512"
