@@ -3395,7 +3395,7 @@ metafile = true
 
 [[files]]
 file = "mods/aero_cam_sync.pw.toml"
-hash = "2c52efdd1ca16f49048dc0388e61e0f80bc1d778ea873aa6ba9853b95ca93043"
+hash = "8cbfc5c015c139c76096fd545715120900a74c78645721d5d40b370e6c06f79f"
 metafile = true
 
 [[files]]
@@ -3470,7 +3470,7 @@ metafile = true
 
 [[files]]
 file = "mods/atmospherics.pw.toml"
-hash = "39fcfd802e90bb940552affb26016806adaa4f1d11578934f236def7c0766e42"
+hash = "865a3ba2059018bec5478a3083738bcb231d289b0426ce7caba73ce10ce42d20"
 metafile = true
 
 [[files]]
@@ -3635,7 +3635,7 @@ metafile = true
 
 [[files]]
 file = "mods/cosy-critters.pw.toml"
-hash = "4f8b3c4bd65755677f0f0d82b81a5aff8e2b5666afeab052515d27caf11c9e3e"
+hash = "cfffcc3c19de7066fad1431eae5004663f02b4ab425edde501b557a04bfd4b43"
 metafile = true
 
 [[files]]
@@ -4010,7 +4010,7 @@ metafile = true
 
 [[files]]
 file = "mods/frametothetrash.pw.toml"
-hash = "b86ccc48902c1136799e5b0a37e86518f8438f78a9001722b48c3b7cc93cd3ca"
+hash = "e1bdd8e5d5dbcd3372b5ef1ccd768d97a48c348ce08e32cb164d74b5ce363f54"
 metafile = true
 
 [[files]]
@@ -4105,7 +4105,7 @@ metafile = true
 
 [[files]]
 file = "mods/ixeris.pw.toml"
-hash = "e28269cf53f3cc3d153a27db54a35d41dd4cfceee78a79e3db4a38f662bcbd57"
+hash = "f895499d75ff0fd43ff1ad5e99786b49e341191b10002f6a70ec020b45a74d9e"
 metafile = true
 
 [[files]]

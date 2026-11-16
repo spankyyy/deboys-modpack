@@ -7,6 +7,10 @@ x-prismlauncher-mc-versions = [ '1.21.1' ]
 x-prismlauncher-release-type = 'release'
 x-prismlauncher-version-number = '2.6.5.2'
 
+[option]
+optional = true
+default = true
+
 [download]
 hash = 'e01173f579a93035f278f53fcf253ad069b6413aa2d8aace777dcd4c023971ba6435abc43a7fd808766e2734ab0db721e93ccca155ae1b2dfdb42d2a553973c1'
 hash-format = 'sha512'
