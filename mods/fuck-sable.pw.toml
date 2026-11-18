@@ -1,0 +1,8 @@
+name = "fuck Sable"
+filename = "fuck-sable-1.8.0.jar"
+side = "server"
+
+[download]
+url = "https://raw.githubusercontent.com/spankyyy/deboys-modpack/main/mods/fuck-sable-1.8.0.jar"
+hash-format = "sha512"
+hash = "a2c1974fac26afb27b2725041559dc7939d213b5c1a78b3e627ee9f45ee5aececa15ed6a9206ba61b993ebc864e9b95e9e9f41bd5c12818482da0053acc66d30"

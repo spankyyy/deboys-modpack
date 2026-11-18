@@ -4024,6 +4024,11 @@ hash = "e1bdd8e5d5dbcd3372b5ef1ccd768d97a48c348ce08e32cb164d74b5ce363f54"
 metafile = true
 
 [[files]]
+file = "mods/fuck-sable.pw.toml"
+hash = "5dbc6c1614d9261f343a5034e16acce327982b9def9cce14324f1d4b6eec8d52"
+metafile = true
+
+[[files]]
 file = "mods/fusion-connected-textures.pw.toml"
 hash = "07f1782e4ef2083af7d871c5486c5753d4be33d6b89ed3a8e9870411f18aad75"
 metafile = true
@@ -4125,7 +4130,7 @@ metafile = true
 
 [[files]]
 file = "mods/jade-sable-compat.pw.toml"
-hash = "3e139bfde01afc10014343bf52184d97ed4ad1736317369b471d11f909ad01c4"
+hash = "5a22e5184e73c548ff56a60d18591c1968b9b639cf55b5808b832175b9d2abe3"
 metafile = true
 
 [[files]]
