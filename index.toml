@@ -3714,6 +3714,11 @@ hash = "7cf710ec8ce7a0064b01da68f685cd77e30a9b843c717b31354e8c3f470aca13"
 metafile = true
 
 [[files]]
+file = "mods/create-bits-n-bobs.pw.toml"
+hash = "2aa588c0760e81c40fae4df29e14643ddb19d40474bf177206a8f687e70b953e"
+metafile = true
+
+[[files]]
 file = "mods/create-blueprinted.pw.toml"
 hash = "0ee826bfd33e2ae015b091292b43df361ba0ce7ba6cb09afa465f9643959aee9"
 metafile = true
@@ -3731,6 +3736,11 @@ metafile = true
 [[files]]
 file = "mods/create-compact-flap.pw.toml"
 hash = "4febff451aea0bd4fb7eb693ebe2909181969993af4913a095c0ce1d55556cdf"
+metafile = true
+
+[[files]]
+file = "mods/create-connected.pw.toml"
+hash = "6ac362d60bc8b13e03a5b6b9cdf9c7676f65d3e89e87c66f18514e7ee164cdb0"
 metafile = true
 
 [[files]]
@@ -3855,7 +3865,7 @@ metafile = true
 
 [[files]]
 file = "mods/create.pw.toml"
-hash = "4b0ca63279620ec9ba4c63820a9d4f9ceea9b717227137ea19e5c420c820f858"
+hash = "dcaf5f2e28db0b9a127d0167456832341045ddc9aec058c3d9fcf53f618d2404"
 metafile = true
 
 [[files]]
