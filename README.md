@@ -19,6 +19,28 @@ Install the packwiz CLI following https://packwiz.infra.link/ . Run `packwiz ref
 
 Review `config/` before making the repository public: configuration can contain private endpoints, tokens or personal preferences. The conversion omits voicechat-server.properties but cannot guarantee every third-party configuration is safe. All selected configs are managed files and publisher edits can overwrite local customization. Review mod side declarations before using this as a dedicated-server pack; this conversion targets the existing client pack.
 
+## AMBUSH: vehicle encounters only
+
+`moonlight-global-datapacks/deboys-ambush-vehicles-only.zip` is a Minecraft 1.21.1 datapack (format 48) built for AMBUSH 1.1.8. It filters 84 vehicle-free encounter definitions while preserving 121 encounters containing vehicles, including nested fleets, skirmishes, and inherited ship profiles. Ground cars and boats remain enabled. Vehicle-free water/air mob attacks and stationary structures without vehicles are blocked too. Mixed encounters retain their accompanying ground troops. Vanilla spawning and other mods are unaffected.
+
+Packwiz delivers the ZIP to Moonlight's configured global datapack directory. This is outside `config/`; it must remain in the pack index. After updating/restarting the server, run `/datapack list available` and `/datapack list enabled`. If needed, enable the pack using the exact ID shown by the list, at highest priority (`last`), typically:
+
+```text
+/datapack enable "file/deboys-ambush-vehicles-only.zip" last
+```
+
+In Pelican's console, omit the leading slash. Enable at highest priority so the filter blocks AMBUSH's lower-priority resources. If Moonlight does not expose it, copy the ZIP into the active world's `datapacks/` directory, run `/reload`, and use the listed ID to enable it. Do not enable duplicate copies. Confirm the pack is enabled in every world/server you use. This does not despawn mobs or cancel events already in progress; restart after enabling for a clean test. No live game test has been performed.
+
+The report is `tools/ambush-vehicle-filter-report.json`. Rebuild and review it after upgrading AMBUSH:
+
+```text
+py -3 tools/build_ambush_vehicle_filter.py ../mods/ambush-1.1.8.jar
+packwiz refresh
+py -3 tools/validate.py --release
+```
+
+Pass the actual new JAR path when upgrading. New encounter IDs are not blocked until the filter is rebuilt. Roll back by disabling this datapack and removing it from the global folder and pack index.
+
 ## Publish to GitHub
 
 1. Create a GitHub repository. A public repository is simplest: installer downloads must be accessible without interactive authentication. Do not put GitHub tokens in launch commands.

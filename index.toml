@@ -3579,11 +3579,6 @@ hash = "9fb8bc70dd100dc252ac296d6749a426c888e05449d53d2662cd30b068a1ab06"
 metafile = true
 
 [[files]]
-file = "mods/coasters-engineered.pw.toml"
-hash = "ef6db44a2d5bef404e7e6b0b5d660a68ea977fafff3d688b125779e671794165"
-metafile = true
-
-[[files]]
 file = "mods/cobweb.pw.toml"
 hash = "987ae7fd3befb45f0943ddacce622146a49fa4deb9f73e49a56c97dab48ed4bb"
 metafile = true
@@ -3721,16 +3716,6 @@ metafile = true
 [[files]]
 file = "mods/create-blueprinted.pw.toml"
 hash = "0ee826bfd33e2ae015b091292b43df361ba0ce7ba6cb09afa465f9643959aee9"
-metafile = true
-
-[[files]]
-file = "mods/create-coaster-seats.pw.toml"
-hash = "9752b062a0a9f3dedea1def20d2d39c4a859e6e9840a9c2df604c2c9438a13ce"
-metafile = true
-
-[[files]]
-file = "mods/create-coasters-simulated.pw.toml"
-hash = "aa834395a4f5a40d51cf89f307cb9cc0913ea8854b0f58833559e302e1e1c0e9"
 metafile = true
 
 [[files]]
@@ -4729,6 +4714,10 @@ metafile = true
 file = "mods/zume.pw.toml"
 hash = "c387d2dffe9e68bdf54d4950b2356b6d621309bd860e416d3f72a6f645cf475a"
 metafile = true
+
+[[files]]
+file = "moonlight-global-datapacks/deboys-ambush-vehicles-only.zip"
+hash = "01ffecf8c1b8c252efe5f014074fc052fcc7823ef47d97c9af9eaa1e84c9659e"
 
 [[files]]
 file = "options.txt"
