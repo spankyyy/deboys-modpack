@@ -3719,6 +3719,11 @@ hash = "0ee826bfd33e2ae015b091292b43df361ba0ce7ba6cb09afa465f9643959aee9"
 metafile = true
 
 [[files]]
+file = "mods/create-cobblestone.pw.toml"
+hash = "265c47a67d9e22610bcad5418fcdf0d08fc0f051822d8a744947c97fe451ea53"
+metafile = true
+
+[[files]]
 file = "mods/create-compact-flap.pw.toml"
 hash = "4febff451aea0bd4fb7eb693ebe2909181969993af4913a095c0ce1d55556cdf"
 metafile = true
