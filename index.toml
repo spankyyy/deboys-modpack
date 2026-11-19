@@ -4783,8 +4783,3 @@ metafile = true
 file = "resourcepacks/bushy-leaves-1-6-5.zip.pw.toml"
 hash = "6c22da16aa284d3a973db36475b7bf87b55f8e279dcfb68bed6d7fa377afc05c"
 metafile = true
-
-[[files]]
-file = "resourcepacks/§b§lSpectator Xray §7v1.2.1.zip.pw.toml"
-hash = "f23e1bb3fc62661ca54f5cd0a1a10c56ced36dace56aedeb472edb59584bccc6"
-metafile = true
