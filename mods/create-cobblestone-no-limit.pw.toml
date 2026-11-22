@@ -1,0 +1,13 @@
+name = "Create: Cobblestone No Limit"
+filename = "create_cobblestone_no_limit-1.0.3.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/OgTrxkoH/versions/BqLkEl3B/create_cobblestone_no_limit-1.0.3.jar"
+hash-format = "sha512"
+hash = "790ec246e55e20f36a6c7475235437ae67144fa5b366aa30efd52a8fe8e008b4db4048b59cc945d0247552905d6fc475f19c4ae64dff3b2d62c5beb905fe11c0"
+
+[update]
+[update.modrinth]
+mod-id = "OgTrxkoH"
+version = "BqLkEl3B"
