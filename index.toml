@@ -3684,11 +3684,6 @@ hash = "7c13f01bda77b72a9ade267cb58ad8bdad3c5e77b3b94f9e8b9feb1785b163fa"
 metafile = true
 
 [[files]]
-file = "mods/create-aeronautics-physics-gantry.pw.toml"
-hash = "bcacb3e3c89da8658f69485029c68c3cfd274835081821e0fd9ffb0618c3decb"
-metafile = true
-
-[[files]]
 file = "mods/create-aeronautics-transmission-linkage.pw.toml"
 hash = "a4efa7aae1b6491a905195f738185d252ebce685fadab82dc77565ac716c25fa"
 metafile = true
@@ -3716,6 +3711,11 @@ metafile = true
 [[files]]
 file = "mods/create-blueprinted.pw.toml"
 hash = "0ee826bfd33e2ae015b091292b43df361ba0ce7ba6cb09afa465f9643959aee9"
+metafile = true
+
+[[files]]
+file = "mods/create-cobblestone-no-limit.pw.toml"
+hash = "af6ab63457fe3b336cf18243b3e534e707b0096f2a02213ac3bfd0543e21b85a"
 metafile = true
 
 [[files]]
