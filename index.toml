@@ -3694,6 +3694,11 @@ hash = "6baee3ec3275720733175c84c9a9f9604ea87d6889e40c1683825a4e3b72652f"
 metafile = true
 
 [[files]]
+file = "mods/create-aeroworks.pw.toml"
+hash = "210419599e24212d879f58d0b3bacb74dec6d64703f49f1c547440bf7705e942"
+metafile = true
+
+[[files]]
 file = "mods/create-assembly-animations.pw.toml"
 hash = "13e5fb93b968c72db5995a105fa2ccf663a222bfded6f1bb27bc31d3e3153c97"
 metafile = true
