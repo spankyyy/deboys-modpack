@@ -4224,6 +4224,11 @@ hash = "1db79d1813da05937d50ad5a4c3cfe4ae6fd060ec0c7855271d099013c7c7b28"
 metafile = true
 
 [[files]]
+file = "mods/loconautics.pw.toml"
+hash = "b7527fe9fc9a17bd0026b38de03cf959afcd4c619694f8cfe35103e3e265ddb4"
+metafile = true
+
+[[files]]
 file = "mods/loot-beams-rarity-light-beams-for-dropped-items.pw.toml"
 hash = "01255d3b09eb04c4495c59d6d68e744e64f477724a78f1e8eff158a835c40ba0"
 metafile = true
