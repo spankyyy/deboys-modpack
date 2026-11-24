@@ -23,3 +23,6 @@ mods/frametothetrash-neoforge-1.21.1-1.0.2-neoforge.1.jar
 
 # Served through a server-only manifest, not installed as a regular file.
 mods/fuck-sable-1.8.0.jar
+
+# Served through an optional manifest, not installed as a mandatory file.
+mods/sablescalablelux-1.21.1-NeoForge-1.0.0.jar

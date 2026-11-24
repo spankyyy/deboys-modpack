@@ -1,0 +1,13 @@
+name = "SableScalableLux"
+filename = "sablescalablelux-1.21.1-NeoForge-1.0.0.jar"
+side = "both"
+
+[option]
+optional = true
+default = true
+description = "Makes Sable sub-level lighting use ScalableLux. Disable to use the normal Sable lighting path."
+
+[download]
+url = "https://raw.githubusercontent.com/spankyyy/deboys-modpack/main/mods/sablescalablelux-1.21.1-NeoForge-1.0.0.jar"
+hash-format = "sha512"
+hash = "b2fe79a45cb9a1904f9c6e69e66906a2de6c7f8e70e962f05834cf948e8362590537a6ffac437f5863297c346a14380504222dba4dabd3487ba1e630a9eb77ea"

@@ -4477,8 +4477,9 @@ hash = "f1baa63421329c2468152d5f40172598886568cea53c73fdf9e31640e594a683"
 metafile = true
 
 [[files]]
-file = "mods/sablescalablelux-1.21.1-NeoForge-1.0.0.jar"
-hash = "3686634ec1726f3838a12c1fd596bb9a93ffcea929ccf28a59e0556101966d83"
+file = "mods/sablescalablelux.pw.toml"
+hash = "c6d7672e6da9313c2ce1a174397436d59cb764d03d80d724259f376b22d9327f"
+metafile = true
 
 [[files]]
 file = "mods/satisfying-buttons.pw.toml"
