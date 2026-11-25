@@ -4328,6 +4328,11 @@ hash = "67d9d869d3a07ded11db5585df806a801a9bd0df2af094e5256bd938ef07e71b"
 metafile = true
 
 [[files]]
+file = "mods/notenoughrecipebook.pw.toml"
+hash = "79c3af7dc622ba501f8bd3a1a5ea7d582c62f85edc16c6365cf09ea70e244a28"
+metafile = true
+
+[[files]]
 file = "mods/numismatics.pw.toml"
 hash = "7cf812080af15981734b5ed88ea0487d1444ac55b3e97c781fd6bc2d569f971e"
 metafile = true
@@ -4437,11 +4442,6 @@ hash = "a1360240783243bce3de0b5f3e59eaec4be6fa568c4ed464a295f7f1e8f158d2"
 metafile = true
 
 [[files]]
-file = "mods/sable-bridging.pw.toml"
-hash = "8268ff06071c9e72030a006f9cc6f5e5007978a23b1caee1792e3640463b424a"
-metafile = true
-
-[[files]]
 file = "mods/sable-cool-rain.pw.toml"
 hash = "c5fc176884d2558087598a9b5e60631a0404cbcc672f6c75d82c70f7b982237b"
 metafile = true
@@ -4504,6 +4504,11 @@ metafile = true
 [[files]]
 file = "mods/shadeless.pw.toml"
 hash = "1df67190bad0ab3eac7f188cd6075912c8e8c66d68b6b023b4875cf131c86c58"
+metafile = true
+
+[[files]]
+file = "mods/shatterbyte-lib.pw.toml"
+hash = "919deaa10fc414f61ffe85af18100cbd169e1535b6a822eddb18ed19b5cbacf2"
 metafile = true
 
 [[files]]
