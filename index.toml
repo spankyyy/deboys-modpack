@@ -3835,7 +3835,7 @@ metafile = true
 
 [[files]]
 file = "mods/create-screw-it.pw.toml"
-hash = "f352a28249c12fd8b2d2a47060ae8cb6aa8219dfe88a172a5e7e9b60634087ba"
+hash = "abdab79f4b33158e4967b721137aa54a2972bf2b44ed438550d474c0c3f1d65c"
 metafile = true
 
 [[files]]
@@ -3865,7 +3865,7 @@ metafile = true
 
 [[files]]
 file = "mods/create-worldshaper-utilities.pw.toml"
-hash = "16768c89e10d43d445309f60e2c9ced692afa6bec4c7d3ef0e68dfffd3460683"
+hash = "57ca674b6d503c592920c61323c06e1a8092aa212ef1f56199b710526e11840b"
 metafile = true
 
 [[files]]
@@ -4715,6 +4715,10 @@ metafile = true
 file = "mods/windy.pw.toml"
 hash = "aae16b6ae0fb4d0ecf3c6f659aa4a6e7506feb132fa667f68b788f8ca63bce2c"
 metafile = true
+
+[[files]]
+file = "mods/worldshaper-utilities-3.0.1+mc1.21.1-neoforge.jar"
+hash = "c10ad20f46389e33dd2f8720953e80f8d86d542a8f5faa9df995d2341dfd3f8d"
 
 [[files]]
 file = "mods/wwoo.pw.toml"

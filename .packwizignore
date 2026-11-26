@@ -26,3 +26,7 @@ mods/fuck-sable-1.8.0.jar
 
 # Served through an optional manifest, not installed as a mandatory file.
 mods/sablescalablelux-1.21.1-NeoForge-1.0.0.jar
+
+# Bundled download sources managed by their manifests.
+mods/create-screw-it-1.21.1-1.0.0.jar
+mods/worldshaper-utilities-3.0.1+mc1.21.1-neoforge.jar
