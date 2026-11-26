@@ -1,0 +1,13 @@
+name = "Create: Worldshaper Utilities"
+filename = "worldshaper-utilities-3.0.1+mc1.21.1-neoforge.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "8d61dd2023ec123b83b4a9eb7695c0ecf3d5cd13"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8963612
+project-id = 1527972

@@ -1,0 +1,13 @@
+name = "Create: Screw It!"
+filename = "create-screw-it-1.21.1-1.0.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "e2432cdc9c58028bb9c60f43b7df5d853627eb02"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 9527218
+project-id = 1794112

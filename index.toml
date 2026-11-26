@@ -3834,6 +3834,11 @@ hash = "5a15f8c49b15b903d2b282db4bb0f8c86d82ce53f101bc14af3b0f6802004f6b"
 metafile = true
 
 [[files]]
+file = "mods/create-screw-it.pw.toml"
+hash = "f352a28249c12fd8b2d2a47060ae8cb6aa8219dfe88a172a5e7e9b60634087ba"
+metafile = true
+
+[[files]]
 file = "mods/create-smart-bounds.pw.toml"
 hash = "3e7deef6665afe92867240da6343f29182f535a82a09a402b7bf785e2ca47ccf"
 metafile = true
@@ -3859,8 +3864,13 @@ hash = "f1b1d216216a21a8d47b39a09048390d29fc6c7bae3f5795d1379e2875cd7c55"
 metafile = true
 
 [[files]]
+file = "mods/create-worldshaper-utilities.pw.toml"
+hash = "16768c89e10d43d445309f60e2c9ced692afa6bec4c7d3ef0e68dfffd3460683"
+metafile = true
+
+[[files]]
 file = "mods/create.pw.toml"
-hash = "dcaf5f2e28db0b9a127d0167456832341045ddc9aec058c3d9fcf53f618d2404"
+hash = "4b0ca63279620ec9ba4c63820a9d4f9ceea9b717227137ea19e5c420c820f858"
 metafile = true
 
 [[files]]
@@ -4439,6 +4449,11 @@ metafile = true
 [[files]]
 file = "mods/rpl.pw.toml"
 hash = "a1360240783243bce3de0b5f3e59eaec4be6fa568c4ed464a295f7f1e8f158d2"
+metafile = true
+
+[[files]]
+file = "mods/sable-cleanup.pw.toml"
+hash = "1c58b40f5c2fe60278fdff9a813dbf4dd8c101231a7055b877b2e0e2afc01def"
 metafile = true
 
 [[files]]
